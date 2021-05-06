@@ -4,9 +4,7 @@ import space.impact.game.Play;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.InputMethodListener;
+import java.awt.event.*;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
 
@@ -30,6 +28,22 @@ public class loginawal{
                     if (mainButton.isEnabled()) {
                         Play f = new Play(new JFrame("Space Impact Reborn"));
                         frame.setVisible(false);
+                    }
+                }
+            }
+        });
+
+        inputannama.addKeyListener(new KeyAdapter() {
+            public void keyPressed(KeyEvent evt) {
+                if(evt.getKeyCode() == KeyEvent.VK_ENTER) {
+                    if (inputannama.getText().isEmpty()){
+                        JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning",JOptionPane.ERROR_MESSAGE);
+                    }
+                    else {
+                        if (mainButton.isEnabled()) {
+                            Play f = new Play(new JFrame("Space Impact Reborn"));
+                            frame.setVisible(false);
+                        }
                     }
                 }
             }

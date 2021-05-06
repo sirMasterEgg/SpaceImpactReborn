@@ -8,7 +8,7 @@ import java.awt.event.WindowEvent;
 import space.impact.source.*;
 
 public class Play extends JFrame{
-    private JFrame frame2;
+    public static JFrame frame2;
     private JPanel panelgame;
 
     public Play(JFrame frame2) {
@@ -19,10 +19,8 @@ public class Play extends JFrame{
                 int result = JOptionPane.showConfirmDialog(frame2,
                         "Do you want to Exit ?", "Exit Confirmation ",
                         JOptionPane.YES_NO_OPTION);
-                if (result == JOptionPane.YES_OPTION)
-                    frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                else if (result == JOptionPane.NO_OPTION)
-                    frame2.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                if (result == JOptionPane.YES_OPTION) frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                else frame2.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             }
         });
         frame2.pack();
