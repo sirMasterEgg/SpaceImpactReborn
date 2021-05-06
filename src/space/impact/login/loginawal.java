@@ -3,9 +3,12 @@ package space.impact.login;
 import space.impact.game.Play;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.InputMethodListener;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
 
 public class loginawal{
     private JPanel menulogin;
@@ -14,7 +17,9 @@ public class loginawal{
 
     private static JFrame frame = new JFrame("Login");
 
+
     public loginawal() {
+
         mainButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
