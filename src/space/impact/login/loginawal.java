@@ -23,12 +23,7 @@ public class loginawal{
                 }
                 else {
                     if (mainButton.isEnabled()) {
-                        Play f = new Play(new JFrame("Tes"));
-                        f.getFrame2().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                        f.getFrame2().pack();
-                        f.getFrame2().setVisible(true);
-                        f.getFrame2().setSize(1000, 600);
-                        f.getFrame2().setLocationRelativeTo(null);
+                        Play f = new Play(new JFrame("Space Impact Reborn"));
                         frame.setVisible(false);
                     }
                 }
@@ -42,6 +37,7 @@ public class loginawal{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+        frame.setResizable(false);
         frame.setSize(500,500);
         frame.setLocationRelativeTo(null);
     }
