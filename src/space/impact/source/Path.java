@@ -16,21 +16,25 @@ public interface Path {
 //    String backwardClick = "res/sound/click_backward.wav";
 //    MusicPlay clickBackward = new MusicPlay();
 
-    // title screen
+    // main menu
     String bgMainMenu="res/foto/bg.jpg";
-    String titlePath = "res/foto/judul.png";
-//    String titleMusicPath = "res/sound/TitleMusic.wav";
-//    MusicPlay titleMusic = new MusicPlay();
+    String mainMenuPath = "res/foto/judul.png";
+    String mainMenuMusicPath = "res/sound/ConquerorsOfSpace.wav";
+    MusicPlay mainMenuMusic = new MusicPlay();
 
     // Standard values
 //    final int mapRow = 6, mapCol = 5;
 //    final int paddleWidth = 100, paddleHeight = 25;
 
-    // zen mode
-//    String zenBGPath = "res/image/bg_zen.jpg";
-//    String zenMusicPath = "res/sound/ZenMode.wav";
-//    String zenButton = "ZEN";
-//    MusicPlay zenMusic = new MusicPlay();
+    // instruction mode
+    String instructionBgPath = "res/foto/bg_zen.jpg";
+    String instructionArrowPath = "res/foto/arrow.png";
+    String instructionSkill1Path = "res/foto/bg_zen.jpg";
+    String instructionSkill2Path = "res/foto/bg_zen.jpg";
+    String instructionSkill3Path = "res/foto/bg_zen.jpg";
+    String instructionMusicPath = "res/sound/ZenMode.wav";
+    String instructionBack = "Back";
+    MusicPlay instructionMusic = new MusicPlay();
 
     // level selector
 //    String levelLabel = "LEVELS";

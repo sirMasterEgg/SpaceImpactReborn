@@ -14,10 +14,17 @@ public class inGame extends JPanel {
 
     public inGame() {
         // main menu
+        //play music
+        Path.mainMenuMusic.playMusic(Path.mainMenuMusicPath);
+        Path.mainMenuMusic.musicLoop();
+        Path.mainMenuMusic.setVolume(0.15f); // range: 0.0f-1.0f
+
+        //set display, bg
         setPreferredSize(Path.frameSize);
         this.bg = new ImageIcon(Path.bgMainMenu).getImage();
         this.setLayout(null);
 
+        //set component
         drawTitle();
         newGameButton();
         instructionButton();
@@ -25,7 +32,7 @@ public class inGame extends JPanel {
     }
 
     private void drawTitle() {
-        ImageIcon logo = new ImageIcon(Path.titlePath);
+        ImageIcon logo = new ImageIcon(Path.mainMenuPath);
         JLabel logoLabel = new JLabel();
         logoLabel.setIcon(logo);
         logoLabel.setHorizontalAlignment(JLabel.RIGHT);
@@ -67,7 +74,8 @@ public class inGame extends JPanel {
 //                Path.titleMusic.stopMusic();
 //                Path.clickForward.playMusic(Commons.forwardClick);
                 //Changing panel and start the game
-//                Play.frame2.setContentPane();
+//                Play.frame2 = new JFrame();
+                Play.frame2.setContentPane(new Instruction());
                 Play.frame2.pack();
             }
         });
