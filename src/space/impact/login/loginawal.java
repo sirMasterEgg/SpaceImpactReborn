@@ -11,30 +11,46 @@ import java.awt.image.ImageProducer;
 public class loginawal {
     private JPanel menulogin;
     private JTextField inputannama;
-    private JButton mainButton;
+    private JButton mainbutton;
 
     private static JFrame frame = new JFrame("Login");
 
+            public static void main(String[] args) {
+                JFrame frame = new JFrame();
+                frame.setSize(960, 540);
+                frame.setLayout(null);
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        frame.setSize(960,540);
-        frame.setLayout(null);
+                JLabel panellogin = new JLabel();
+                panellogin.setBounds(0, 0, 960, 540);
+                panellogin.setIcon(new ImageIcon("res/foto/backgroundlogin.gif"));
+                frame.setResizable(true);
+                frame.add(panellogin);
 
-        JLabel panellogin = new JLabel();
-        panellogin.setBounds(0,0,960,540);
-        panellogin.setIcon(new ImageIcon("res/foto/backgroundlogin.gif"));
-        frame.setResizable(true);
-        frame.add(panellogin);
+                JTextField nama = new JTextField();
+                nama.setBounds(320, 300, 300, 40);
+                panellogin.add(nama);
 
-        JTextField nama = new JTextField();
-        nama.setBounds(320,300,300,40);
-        panellogin.add(nama);
+                JButton confirmnama = new JButton("Confirm");
+                confirmnama.setBounds(370, 400, 200, 40);
+                panellogin.add(confirmnama);
 
-        JButton confirmnama = new JButton("Confirm");
-        confirmnama.setBounds(370,400,200,40);
-        panellogin.add(confirmnama);
+                frame.setVisible(true);
 
-        frame.setVisible(true);
-    }
+                confirmnama.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if (confirmnama.isEnabled() && confirmnama.getText().isEmpty()){
+                            JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning",JOptionPane.ERROR_MESSAGE);
+                        }else {
+                            if (confirmnama.isEnabled()) {
+                                Play f = new Play(new JFrame("Space Impact Reborn"));
+                                frame.setVisible(false);
+                            }
+                        }
+                    }
+                });
+
+            }
+
 }
+
