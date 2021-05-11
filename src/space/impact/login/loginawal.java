@@ -8,56 +8,33 @@ import java.awt.event.*;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
 
-public class loginawal{
+public class loginawal {
     private JPanel menulogin;
     private JTextField inputannama;
     private JButton mainButton;
 
     private static JFrame frame = new JFrame("Login");
 
-//ccc
-    public loginawal() {
-
-        mainButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (inputannama.getText().isEmpty()){
-                    JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning",JOptionPane.ERROR_MESSAGE);
-                }
-                else {
-                    if (mainButton.isEnabled()) {
-                        Play f = new Play(new JFrame("Space Impact Reborn"));
-                        frame.setVisible(false);
-                    }
-                }
-            }
-        });
-
-        inputannama.addKeyListener(new KeyAdapter() {
-            public void keyPressed(KeyEvent evt) {
-                if(evt.getKeyCode() == KeyEvent.VK_ENTER) {
-                    if (inputannama.getText().isEmpty()){
-                        JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning",JOptionPane.ERROR_MESSAGE);
-                    }
-                    else {
-                        if (mainButton.isEnabled()) {
-                            Play f = new Play(new JFrame("Space Impact Reborn"));
-                            frame.setVisible(false);
-                        }
-                    }
-                }
-            }
-        });
-
-    }
 
     public static void main(String[] args) {
-        frame.setContentPane(new loginawal().menulogin);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
+        JFrame frame = new JFrame();
+        frame.setSize(960,540);
+        frame.setLayout(null);
+
+        JLabel panellogin = new JLabel();
+        panellogin.setBounds(0,0,960,540);
+        panellogin.setIcon(new ImageIcon("res/foto/backgroundlogin.gif"));
+        frame.setResizable(true);
+        frame.add(panellogin);
+
+        JTextField nama = new JTextField();
+        nama.setBounds(320,300,300,40);
+        panellogin.add(nama);
+
+        JButton confirmnama = new JButton("Confirm");
+        confirmnama.setBounds(370,400,200,40);
+        panellogin.add(confirmnama);
+
         frame.setVisible(true);
-        frame.setResizable(false);
-        frame.setSize(500,500);
-        frame.setLocationRelativeTo(null);
     }
 }
