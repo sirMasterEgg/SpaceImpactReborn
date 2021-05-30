@@ -30,8 +30,10 @@ public class Instruction extends JPanel {
         drawDirection();
         drawTextDirection();
         backButton();
+        kamikaze();
+        Mlaucher();
+        Invisibel();
     }
-
     private void drawDirection() {
         ImageIcon logo = new ImageIcon(ImageClass.scaleImage(Path.instructionArrowPath,0.4));
         JLabel logoLabel = new JLabel();
@@ -61,10 +63,50 @@ public class Instruction extends JPanel {
         label.setVisible(true);
         this.add(label);
     }
+    private void kamikaze(){
+        //kamikaze => hotkey(...)
+        Rectangle rect = new Rectangle(300,150,800,300);
+        JLabel Klabel = new JLabel("<html> <table> \n" +
+                "   <tr>\n" +
+                "       <td> -Kamikaze is the strongest weapon in this game, " +
+                "             by pressing the B button it can immediately make all enemies disappear instantly.\n" +
+                "            \n" +
+                "       </tr>\n" +
+                "       </table> </html>");
+        Klabel.setFont(font.deriveFont(35.0f));
+        Klabel.setForeground(new Color(255,255,255));
+        Klabel.setBounds(rect);
+        Klabel.setVisible(true);
+        this.add(Klabel);
+    }
 
-    //kamikaze => hotkey(...)
-    //missile launcher => hotkey(...)
-    //invisibility => hotkey(...)
+    private void Mlaucher(){
+        //missile launcher => hotkey(...)
+        Rectangle rect = new Rectangle(300,300,800,300);
+        JLabel MLlabel = new JLabel("<html> <table> \n" +
+                "   <tr>\n "+
+                "       <td> -with the missile launcher the enemy can be killed one by one by pressing the A button\n" +
+                "           </tr>\n" +
+                " </table> </html>");
+        MLlabel.setFont(font.deriveFont(35.0f));
+        MLlabel.setForeground(new Color(255,255,255));
+        MLlabel.setBounds(rect);
+        MLlabel.setVisible(true);
+        this.add(MLlabel);
+    }
+
+    private void Invisibel(){
+        //invisibility => hotkey(...)
+        Rectangle rect = new Rectangle(300,400,800,300);
+        JLabel Ilabel = new JLabel("<html> <table> \n" +
+                "   <tr>\n " +
+                "       <td> -Invisible mode can be activated by pressing the I button");
+        Ilabel.setFont(font.deriveFont(35.0f));
+        Ilabel.setForeground(new Color(255,255,255));
+        Ilabel.setBounds(rect);
+        Ilabel.setVisible(true);
+        this.add(Ilabel);
+    }
 
     private void drawSkill1() {
         ImageIcon logo = new ImageIcon(ImageClass.scaleImage(Path.instructionArrowPath,0.4));
