@@ -65,7 +65,7 @@ public class Instruction extends JPanel {
     }
     private void kamikaze(){
         //kamikaze => hotkey(...)
-        Rectangle rect = new Rectangle(300,150,800,300);
+        Rectangle rect = new Rectangle(300,150,750,300);
         JLabel Klabel = new JLabel("<html> <table> \n" +
                 "   <tr>\n" +
                 "       <td> -Kamikaze is the strongest weapon in this game, " +
@@ -82,10 +82,10 @@ public class Instruction extends JPanel {
 
     private void Mlaucher(){
         //missile launcher => hotkey(...)
-        Rectangle rect = new Rectangle(300,300,800,300);
+        Rectangle rect = new Rectangle(300,300,700,300);
         JLabel MLlabel = new JLabel("<html> <table> \n" +
                 "   <tr>\n "+
-                "       <td> -with the missile launcher the enemy can be killed one by one by pressing the A button\n" +
+                "       <td> -with the missile launcher the enemy can be killed one by one by pressing the A button" +
                 "           </tr>\n" +
                 " </table> </html>");
         MLlabel.setFont(font.deriveFont(35.0f));
@@ -100,7 +100,7 @@ public class Instruction extends JPanel {
         Rectangle rect = new Rectangle(300,400,800,300);
         JLabel Ilabel = new JLabel("<html> <table> \n" +
                 "   <tr>\n " +
-                "       <td> -Invisible mode can be activated by pressing the I button");
+                "       <td> -Invisible mode can be activated by pressing the I button.");
         Ilabel.setFont(font.deriveFont(35.0f));
         Ilabel.setForeground(new Color(255,255,255));
         Ilabel.setBounds(rect);
