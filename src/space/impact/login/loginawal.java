@@ -13,7 +13,7 @@ public class loginawal {
     private JTextField inputannama;
     private JButton mainbutton;
 
-    private static JFrame frame = new JFrame("Login");
+    private static final JFrame frame = new JFrame("Login");
 
             public static void main(String[] args) {
                 JFrame frame = new JFrame();
@@ -39,7 +39,7 @@ public class loginawal {
                 confirmnama.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        if (confirmnama.isEnabled() && confirmnama.getText().isEmpty()){
+                        if (confirmnama.isEnabled() && nama.getText().isEmpty()){
                             JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning",JOptionPane.ERROR_MESSAGE);
                         }else {
                             if (confirmnama.isEnabled()) {
@@ -49,7 +49,6 @@ public class loginawal {
                         }
                     }
                 });
-
             }
 
 }

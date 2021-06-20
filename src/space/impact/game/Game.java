@@ -34,18 +34,18 @@ public class Game extends JPanel implements ActionListener {
             bots.add(new Bot(700, 400, 1, 1));
             for (Bot i : bots) {
                 if (i.getJenisbot() == 1) {
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/1.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
                     i.setDelaybot(i.getDelaybot() + 1);
                 }
             }
-            pesawat = new JLabel(new ImageIcon(getClass().getResource("../../img/foto/hero.png")));
+            pesawat = new JLabel(new ImageIcon("res/foto/hero.png"));
             pesawat.setSize(50, 50);
             pesawat.setLocation(xp, yp);
             this.add(pesawat);
-            Background = new JLabel(new ImageIcon(getClass().getResource("../../img/foto/bg.jpg")));
+            Background = new JLabel(new ImageIcon("res/foto/bg.jpg"));
             Background.setSize(1000, 700);
             Background.setLocation(0, 0);
             this.setLayout(null);
@@ -84,7 +84,7 @@ public class Game extends JPanel implements ActionListener {
                     bots.add(new Bot(850, 500, 1, 1));
                     for (Bot i : bots) {
                         if (i.getJenisbot() == 1) {
-                            i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/1.png"))));
+                            i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
                             i.getSprite().setSize(100, 100);
                             i.getSprite().setLocation(i.getXbot(), i.getYbot());
                             this.add(i.getSprite());
@@ -108,7 +108,7 @@ public class Game extends JPanel implements ActionListener {
                     bots.add(new Bot(850, 500, 1, 1));
                     for (Bot i : bots) {
                         if (i.getJenisbot() == 1) {
-                            i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/1.png"))));
+                            i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
                             i.getSprite().setSize(100, 100);
                             i.getSprite().setLocation(i.getXbot(), i.getYbot());
                             this.add(i.getSprite());
@@ -130,7 +130,7 @@ public class Game extends JPanel implements ActionListener {
 
                     for (Bot i : bots) {
                         if (i.getJenisbot() == 1) {
-                            i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/1.png"))));
+                            i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
                             i.getSprite().setSize(100, 100);
                             i.getSprite().setLocation(i.getXbot(), i.getYbot());
                             this.add(i.getSprite());
@@ -149,7 +149,7 @@ public class Game extends JPanel implements ActionListener {
 
                     for (Bot i : bots) {
                         if (i.getJenisbot() == 1) {
-                            i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/1.png"))));
+                            i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
                             i.getSprite().setSize(100, 100);
                             i.getSprite().setLocation(i.getXbot(), i.getYbot());
                             this.add(i.getSprite());
@@ -164,14 +164,14 @@ public class Game extends JPanel implements ActionListener {
             for (Bot i : bots) {
                 if (i.getJenisbot() == 1) {
                     this.remove(i.getSprite());
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/1.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
                     i.setDelaybot(i.getDelaybot() + 1);
                 } else if (i.getJenisbot() == 2) {
                     this.remove(i.getSprite());
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/2.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/2.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
@@ -179,7 +179,7 @@ public class Game extends JPanel implements ActionListener {
 
                 } else if (i.getJenisbot() == 3) {
                     this.remove(i.getSprite());
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/3.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/3.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
@@ -187,7 +187,7 @@ public class Game extends JPanel implements ActionListener {
 
                 } else if (i.getJenisbot() == 4) {
                     this.remove(i.getSprite());
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/4.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/4.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
@@ -195,7 +195,7 @@ public class Game extends JPanel implements ActionListener {
 
                 } else if (i.getJenisbot() == 5) {
                     this.remove(i.getSprite());
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/5.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/5.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
@@ -203,7 +203,7 @@ public class Game extends JPanel implements ActionListener {
 
                 } else if (i.getJenisbot() == 6) {
                     this.remove(i.getSprite());
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/6.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/6.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
@@ -211,7 +211,7 @@ public class Game extends JPanel implements ActionListener {
 
                 } else if (i.getJenisbot() == 7) {
                     this.remove(i.getSprite());
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/7.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/7.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
@@ -219,7 +219,7 @@ public class Game extends JPanel implements ActionListener {
 
                 } else if (i.getJenisbot() == 8) {
                     this.remove(i.getSprite());
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/bot/8.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/8.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
@@ -275,7 +275,7 @@ public class Game extends JPanel implements ActionListener {
                 TEMBAK = 0;
                 for (peluru i : bullet) {
                     if (i.getPeluruaktif() == 0) {
-                        i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/foto/unnamed.png"))));
+                        i.setSprite(new JLabel(new ImageIcon("res/foto/unnamed.png")));
                         i.getSprite().setSize(100, 100);
                         i.getSprite().setLocation(i.getPelurux(), i.getPeluruy());
                         this.add(i.getSprite());
@@ -287,7 +287,7 @@ public class Game extends JPanel implements ActionListener {
             if (Start == 0) {
                 for (peluru i : bullet) {
                     this.remove(i.getSprite());
-                    i.setSprite(new JLabel(new ImageIcon(getClass().getResource("../../img/foto/unnamed.png"))));
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/unnamed.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getPelurux(), i.getPeluruy());
                     this.add(i.getSprite());
@@ -306,12 +306,12 @@ public class Game extends JPanel implements ActionListener {
                     }
                 }
                 this.remove(pesawat);
-                pesawat = new JLabel(new ImageIcon(getClass().getResource("../../img/foto/hero.png")));
+                pesawat = new JLabel(new ImageIcon("res/foto/hero.png"));
                 pesawat.setSize(50, 50);
                 pesawat.setLocation(xp, yp);
                 this.add(pesawat);
                 this.remove(Background);
-                Background = new JLabel(new ImageIcon(getClass().getResource("../../img/foto/bg.jpg")));
+                Background = new JLabel(new ImageIcon("res/foto/bg.jpg"));
                 Background.setSize(1000, 700);
                 Background.setLocation(0, 0);
                 this.add(Background);
