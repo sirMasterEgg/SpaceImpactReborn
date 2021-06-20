@@ -56,8 +56,14 @@ public class inGame extends JPanel {
                 //Changing panel and start the game
 //                Play.frame2.setContentPane();
                 Play.frame2.pack();
+                if(button.isEnabled()){
+                    newGame ngewe = new newGame();
+                }
             }
         });
+
+
+
     }
 
     private void instructionButton() {
