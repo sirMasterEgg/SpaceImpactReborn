@@ -29,6 +29,7 @@ public class Instruction extends JPanel {
         //set component
         drawDirection();
         drawTextDirection();
+        kamikazeDirection();
         backButton();
         kamikaze();
         Mlaucher();
@@ -43,9 +44,14 @@ public class Instruction extends JPanel {
         this.add(logoLabel);
     }
 
-//    private void kamikazeDirection(){
-//        ImageIcon logo = new ImageIcon(ImageClass.scaleImage(Path.));
-//    }
+    private void kamikazeDirection(){
+        ImageIcon killself = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill1Path, 0.2));
+        JLabel logoLabel = new JLabel();
+        logoLabel.setIcon(killself);
+        logoLabel.setHorizontalAlignment(JLabel.LEADING);
+        logoLabel.setBounds(100, 225, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(logoLabel);
+    }
     private void drawTextDirection() {
         Rectangle rect = new Rectangle(300,85,500,100);
         JLabel label = new JLabel("<html> <table>\n" +
