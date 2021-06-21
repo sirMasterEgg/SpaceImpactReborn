@@ -57,7 +57,8 @@ public class inGame extends JPanel {
 //                Play.frame2.setContentPane();
                 Play.frame2.pack();
                 if(button.isEnabled()){
-                    newGame ngewe = new newGame();
+                    newGame n = new newGame();
+                    Play.frame2.setVisible(false);
                 }
             }
         });
