@@ -43,6 +43,9 @@ public class Instruction extends JPanel {
         this.add(logoLabel);
     }
 
+//    private void kamikazeDirection(){
+//        ImageIcon logo = new ImageIcon(ImageClass.scaleImage(Path.));
+//    }
     private void drawTextDirection() {
         Rectangle rect = new Rectangle(300,85,500,100);
         JLabel label = new JLabel("<html> <table>\n" +

@@ -42,7 +42,7 @@ public class loginawal {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         if (confirmnama.isEnabled() && nama.getText().isEmpty()){
-                            JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning",JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning", JOptionPane.ERROR_MESSAGE);
                         }else {
                             if (confirmnama.isEnabled()) {
                                 Play f = new Play(new JFrame("Space Impact Reborn"));
