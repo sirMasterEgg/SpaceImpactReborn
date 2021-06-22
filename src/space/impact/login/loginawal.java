@@ -30,6 +30,8 @@ public class loginawal {
                 nama.setBounds(320, 300, 300, 40);
                 panellogin.add(nama);
 
+
+
                 JButton confirmnama = new JButton("Confirm");
                 confirmnama.setBounds(370, 400, 200, 40);
                 panellogin.add(confirmnama);
@@ -40,11 +42,27 @@ public class loginawal {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         if (confirmnama.isEnabled() && nama.getText().isEmpty()){
-                            JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning",JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning", JOptionPane.ERROR_MESSAGE);
                         }else {
                             if (confirmnama.isEnabled()) {
                                 Play f = new Play(new JFrame("Space Impact Reborn"));
                                 frame.setVisible(false);
+                            }
+                        }
+                    }
+                });
+
+                nama.addKeyListener(new KeyAdapter(){
+                    @Override
+                    public void keyPressed(KeyEvent e) {
+                        if (e.getKeyCode() == KeyEvent.VK_ENTER){
+                            if (confirmnama.isEnabled() && nama.getText().isEmpty()){
+                                JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning",JOptionPane.ERROR_MESSAGE);
+                            }else {
+                                if (confirmnama.isEnabled()) {
+                                    Play f = new Play(new JFrame("Space Impact Reborn"));
+                                    frame.setVisible(false);
+                                }
                             }
                         }
                     }

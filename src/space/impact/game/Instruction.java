@@ -29,6 +29,9 @@ public class Instruction extends JPanel {
         //set component
         drawDirection();
         drawTextDirection();
+        kamikazeDirection();
+        missileDirection();
+        invisibelDirection();
         backButton();
         kamikaze();
         Mlaucher();
@@ -41,6 +44,33 @@ public class Instruction extends JPanel {
         logoLabel.setHorizontalAlignment(JLabel.LEFT);
         logoLabel.setBounds(100,100, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logoLabel);
+    }
+
+    private void kamikazeDirection(){
+        ImageIcon killself = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill1Path, 0.2));
+        JLabel logoLabel = new JLabel();
+        logoLabel.setIcon(killself);
+        logoLabel.setHorizontalAlignment(JLabel.LEADING);
+        logoLabel.setBounds(60, 150, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(logoLabel);
+    }
+
+    private void missileDirection(){
+        ImageIcon launcher = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill2Path, 0.2));
+        JLabel logolabel = new JLabel();
+        logolabel.setIcon(launcher);
+        logolabel.setHorizontalAlignment(JLabel.LEADING);
+        logolabel.setBounds(50, 300, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(logolabel);
+    }
+
+    private void invisibelDirection(){
+        ImageIcon disappear = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill3Path, 0.1));
+        JLabel logolabel = new JLabel();
+        logolabel.setIcon(disappear);
+        logolabel.setHorizontalAlignment(JLabel.LEADING);
+        logolabel.setBounds(25, 400, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(logolabel);
     }
 
     private void drawTextDirection() {
@@ -65,12 +95,11 @@ public class Instruction extends JPanel {
     }
     private void kamikaze(){
         //kamikaze => hotkey(...)
-        Rectangle rect = new Rectangle(300,150,750,300);
+        Rectangle rect = new Rectangle(300,110,750,300);
         JLabel Klabel = new JLabel("<html> <table> \n" +
                 "   <tr>\n" +
-                "       <td> -Kamikaze is the strongest weapon in this game, " +
-                "             by pressing the B button it can immediately make all enemies disappear instantly.\n" +
-                "            \n" +
+                "       <td> -Press (k) to kill every enemy ahead and yourself but you score x2\n" +
+                "\n" +
                 "       </tr>\n" +
                 "       </table> </html>");
         Klabel.setFont(font.deriveFont(35.0f));
@@ -82,10 +111,10 @@ public class Instruction extends JPanel {
 
     private void Mlaucher(){
         //missile launcher => hotkey(...)
-        Rectangle rect = new Rectangle(300,300,700,300);
+        Rectangle rect = new Rectangle(300,250,700,300);
         JLabel MLlabel = new JLabel("<html> <table> \n" +
                 "   <tr>\n "+
-                "       <td> -with the missile launcher the enemy can be killed one by one by pressing the A button" +
+                "       <td> -with the missile launcher the enemy can be killed one by one by pressing the (A) button" +
                 "           </tr>\n" +
                 " </table> </html>");
         MLlabel.setFont(font.deriveFont(35.0f));
@@ -100,7 +129,8 @@ public class Instruction extends JPanel {
         Rectangle rect = new Rectangle(300,400,800,300);
         JLabel Ilabel = new JLabel("<html> <table> \n" +
                 "   <tr>\n " +
-                "       <td> -Invisible mode can be activated by pressing the I button.");
+                "       <td> -become immune from enemy attack for 3 seconds by pressing (c)\n" +
+                "invisible");
         Ilabel.setFont(font.deriveFont(35.0f));
         Ilabel.setForeground(new Color(255,255,255));
         Ilabel.setBounds(rect);
