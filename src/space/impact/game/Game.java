@@ -15,10 +15,12 @@ public class Game extends JPanel implements ActionListener{
     int Start=0;
     int xp=100;
     int yp=100;
+    int only=0;
     Random rn = new Random();
     int wave=1;
     int cek=0;
     int tembakanbot=0;
+    int nyawa=3;
     int delay=0;
     int delayp=0;
     int delaypeluru=0;
@@ -27,9 +29,16 @@ public class Game extends JPanel implements ActionListener{
     int TEMBAK=0;
     int atasbawah=0;
     int shoot=0;
+    int time=0;
+    int tx = 0;
     JLabel Background ;
     JLabel pesawat ;
+    JLabel hati1 ;
+    JLabel hati2 ;
+    JLabel hati3 ;
+    JLabel barrier;
     Timer timer;
+
     Game() {
         if(Start==0){
             cekwave[0]=0;
@@ -49,6 +58,18 @@ public class Game extends JPanel implements ActionListener{
                     i.setDelaybot(i.getDelaybot() + 1);
                 }
             }
+            hati1 = new JLabel(new ImageIcon("res/foto/Hati.png"));
+            hati1.setSize(50, 50);
+            hati1.setLocation(20, 650);
+            this.add(hati1);
+            hati2 = new JLabel(new ImageIcon("res/foto/Hati.png"));
+            hati2.setSize(50, 50);
+            hati2.setLocation(60, 650);
+            this.add(hati2);
+            hati3 = new JLabel(new ImageIcon("res/foto/Hati.png"));
+            hati3.setSize(50, 50);
+            hati3.setLocation(100, 650);
+            this.add(hati3);
             pesawat = new JLabel(new ImageIcon("res/foto/hero.png"));
             pesawat.setSize(50, 50);
             pesawat.setLocation(xp, yp);
@@ -77,6 +98,32 @@ public class Game extends JPanel implements ActionListener{
     public void draw(Graphics g) {
         g.setColor(Color.black);
         if(running) {
+            if(time==3){
+                only=10;
+                this.remove(barrier);
+                time=0;
+            }
+            if(tx==30){
+                tx=0;
+                time++;
+            }
+            if(only==1){
+                barrier=new JLabel(new ImageIcon("res/foto/barrier.png"));
+                barrier.setSize(100, 100);
+                barrier.setLocation(xp-30,yp-27);
+                this.add(barrier);
+                only=2;
+            }
+
+            if(only==2){
+                tx++;
+                this.remove(barrier);
+                barrier=new JLabel(new ImageIcon("res/foto/barrier.png"));
+                barrier.setSize(100, 100);
+                barrier.setLocation(xp-30,yp-27);
+                this.add(barrier);
+            }
+
             if(wave==2){
                 delay++;
                 if(delay==100) {
@@ -257,6 +304,24 @@ public class Game extends JPanel implements ActionListener{
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getPelurux(), i.getPeluruy());
                     this.add(i.getSprite());
+                    if(only!=2) {
+                        if (xp + 3 >= i.getPelurux() && yp - 50 <= i.getPeluruy() && yp >= i.getPeluruy()) {
+                            if (nyawa == 3) {
+                                nyawa--;
+                                this.remove(hati3);
+                                i.setPeluruaktif(2);
+                            } else if (nyawa == 2) {
+                                nyawa--;
+                                this.remove(hati2);
+                                i.setPeluruaktif(2);
+                            } else if (nyawa == 1) {
+                                nyawa--;
+                                this.remove(hati1);
+                                i.setPeluruaktif(2);
+
+                            }
+                        }
+                    }
                 }
                 if(i.getPelurux()<15){
                     i.setPeluruaktif(2);
@@ -406,12 +471,18 @@ public class Game extends JPanel implements ActionListener{
                 case 's':
                     yp+=15;
                     break;
-                case 'd':
-                    xp+=15;
+                case 'c':
+                    if(only==0){
+                        only=1;
+                    }
                     break;
-                case 'a':
-                    xp-=15;
-                    break;
+
+//                case 'd':
+//                    xp+=15;
+//                    break;
+//                case 'a':
+//                    xp-=15;
+//                    break;
             }
 
         }
