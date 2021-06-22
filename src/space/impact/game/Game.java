@@ -392,27 +392,29 @@ public class Game extends JPanel implements ActionListener{
     public class MyKeyAdapter extends KeyAdapter{
         @Override
         public void keyPressed(KeyEvent e) {
-            switch(e.getKeyCode()) {
-                case KeyEvent.VK_UP:
+            if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+                if (delayp == 1) {
+                    delayp = 0;
+                    TEMBAK = 1;
+                    shoot = 1;
+                }
+            }
+            switch (e.getKeyChar()){
+                case 'w':
                     yp-=15;
                     break;
-                case KeyEvent.VK_DOWN:
+                case 's':
                     yp+=15;
                     break;
-                case KeyEvent.VK_SPACE:
-                    if(delayp==1) {
-                        delayp=0;
-                        TEMBAK = 1;
-                        shoot=1;
-                    }
-                    break;
-                case KeyEvent.VK_RIGHT:
+                case 'd':
                     xp+=15;
                     break;
-                case KeyEvent.VK_LEFT:
+                case 'a':
                     xp-=15;
                     break;
             }
+
         }
+
     }
 }
