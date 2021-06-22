@@ -21,6 +21,7 @@ public class ImageClass {
             img = ImageIO.read(new File(path));
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println(e);
         }
 
         int lebar,tinggi;

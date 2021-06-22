@@ -29,9 +29,9 @@ public interface Path {
     // instruction mode
     String instructionBgPath = "res/foto/bg_zen.jpg";
     String instructionArrowPath = "res/foto/arrow.png";
-    String instructionSkill1Path = "res/foto/bg_zen.jpg";
-    String instructionSkill2Path = "res/foto/bg_zen.jpg";
-    String instructionSkill3Path = "res/foto/bg_zen.jpg";
+    String instructionSkill1Path = "res/foto/dead.png";
+    String instructionSkill2Path = "res/foto/launcher.png";
+    String instructionSkill3Path = "res/foto/disappear.png";
     String instructionMusicPath = "res/sound/ZenMode.wav";
     String instructionBack = "Back";
     MusicPlay instructionMusic = new MusicPlay();
