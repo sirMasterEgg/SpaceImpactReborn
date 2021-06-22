@@ -477,12 +477,12 @@ public class Game extends JPanel implements ActionListener{
                     }
                     break;
 
-//                case 'd':
-//                    xp+=15;
-//                    break;
-//                case 'a':
-//                    xp-=15;
-//                    break;
+                case 'd':
+                    xp+=15;
+                    break;
+                case 'a':
+                    xp-=15;
+                    break;
             }
 
         }
