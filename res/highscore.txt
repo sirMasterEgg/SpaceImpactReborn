@@ -1,0 +1,4 @@
+agus|1
+budi|2
+cok|3
+dodol|4
