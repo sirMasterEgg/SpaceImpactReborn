@@ -1,4 +1,8 @@
 package space.impact.game;
+import space.impact.source.ButtonMaker;
+import space.impact.source.FontMaker;
+import space.impact.source.Path;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.sound.sampled.*;
@@ -9,6 +13,9 @@ import java.util.ArrayList;
 import java.util.Random;
 public class Game extends JPanel implements ActionListener{
     static final int DELAY = 20;
+    private Font font = new FontMaker(Path.mainFont).getFont();
+    private boolean pause;
+    private boolean play;
     ArrayList<peluru> bullet = new ArrayList<>();
     ArrayList<peluruMusuh> bulletM = new ArrayList<>();
     ArrayList<Bot> bots = new ArrayList<>();
@@ -456,10 +463,9 @@ public class Game extends JPanel implements ActionListener{
         repaint();
     }
 
-    private void exitGame(){
+    public void pauseGame(){
 
     }
-
     public class MyKeyAdapter extends KeyAdapter{
         @Override
         public void keyPressed(KeyEvent e) {
