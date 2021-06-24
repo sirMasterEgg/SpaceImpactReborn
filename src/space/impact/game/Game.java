@@ -1,6 +1,7 @@
 package space.impact.game;
 import space.impact.source.ButtonMaker;
 import space.impact.source.FontMaker;
+import space.impact.source.ImageClass;
 import space.impact.source.Path;
 
 import java.awt.*;
@@ -97,6 +98,7 @@ public class Game extends JPanel implements ActionListener{
         running = true;
         timer = new Timer(DELAY,this);
         timer.start();
+        pauseGame();
     }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -464,7 +466,12 @@ public class Game extends JPanel implements ActionListener{
     }
 
     public void pauseGame(){
-
+        ImageIcon mini = new ImageIcon(ImageClass.scaleImage(Path.gamepaused, 3));
+        JLabel gambar = new JLabel();
+        gambar.setIcon(mini);
+        gambar.setHorizontalAlignment(JLabel.LEADING);
+        gambar.setBounds(50, 50, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(gambar);
     }
     public class MyKeyAdapter extends KeyAdapter{
         @Override
