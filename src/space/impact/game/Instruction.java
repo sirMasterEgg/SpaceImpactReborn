@@ -51,7 +51,7 @@ public class Instruction extends JPanel {
         JLabel logoLabel = new JLabel();
         logoLabel.setIcon(killself);
         logoLabel.setHorizontalAlignment(JLabel.LEADING);
-        logoLabel.setBounds(60, 150, ImageClass.imgWidth(), ImageClass.imgHeight());
+        logoLabel.setBounds(40, 150, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logoLabel);
     }
 
@@ -65,11 +65,11 @@ public class Instruction extends JPanel {
     }
 
     private void invisibelDirection(){
-        ImageIcon disappear = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill3Path, 0.1));
+        ImageIcon disappear = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill3Path, 2.5));
         JLabel logolabel = new JLabel();
         logolabel.setIcon(disappear);
         logolabel.setHorizontalAlignment(JLabel.LEADING);
-        logolabel.setBounds(25, 400, ImageClass.imgWidth(), ImageClass.imgHeight());
+        logolabel.setBounds(80, 475, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logolabel);
     }
 

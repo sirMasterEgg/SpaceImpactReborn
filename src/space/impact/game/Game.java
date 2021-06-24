@@ -456,6 +456,10 @@ public class Game extends JPanel implements ActionListener{
         repaint();
     }
 
+    private void exitGame(){
+
+    }
+
     public class MyKeyAdapter extends KeyAdapter{
         @Override
         public void keyPressed(KeyEvent e) {
