@@ -15,8 +15,6 @@ import java.util.Random;
 public class Game extends JPanel implements ActionListener{
     static final int DELAY = 20;
     private Font font = new FontMaker(Path.mainFont).getFont();
-    private boolean pause;
-    private boolean play;
     ArrayList<peluru> bullet = new ArrayList<>();
     ArrayList<peluruMusuh> bulletM = new ArrayList<>();
     ArrayList<Bot> bots = new ArrayList<>();
@@ -46,6 +44,7 @@ public class Game extends JPanel implements ActionListener{
     JLabel hati3 ;
     JLabel barrier;
     Timer timer;
+    JLabel pause;
 
     Game() {
         if(Start==0){
@@ -91,6 +90,11 @@ public class Game extends JPanel implements ActionListener{
             this.setFocusable(true);
             this.addKeyListener(new MyKeyAdapter());
             this.add(Background);
+
+            pause = new JLabel(new ImageIcon("res/foto/minipause.png"));
+            pause.setSize(20, 20);
+            pause.setLocation(100, 100);
+            this.add(pause);
         }
         startGame();
     }
@@ -98,7 +102,6 @@ public class Game extends JPanel implements ActionListener{
         running = true;
         timer = new Timer(DELAY,this);
         timer.start();
-        pauseGame();
     }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -465,14 +468,6 @@ public class Game extends JPanel implements ActionListener{
         repaint();
     }
 
-    public void pauseGame(){
-        ImageIcon mini = new ImageIcon(ImageClass.scaleImage(Path.gamepaused, 3));
-        JLabel gambar = new JLabel();
-        gambar.setIcon(mini);
-        gambar.setHorizontalAlignment(JLabel.LEADING);
-        gambar.setBounds(50, 50, ImageClass.imgWidth(), ImageClass.imgHeight());
-        this.add(gambar);
-    }
     public class MyKeyAdapter extends KeyAdapter{
         @Override
         public void keyPressed(KeyEvent e) {
