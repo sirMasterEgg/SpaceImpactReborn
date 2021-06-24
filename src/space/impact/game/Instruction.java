@@ -114,7 +114,7 @@ public class Instruction extends JPanel {
         Rectangle rect = new Rectangle(300,250,700,300);
         JLabel MLlabel = new JLabel("<html> <table> \n" +
                 "   <tr>\n "+
-                "       <td> -with the missile launcher the enemy can be killed one by one by pressing the (A) button" +
+                "       <td> -by pressing the (A) button shoot 3 bullet at the same time" +
                 "           </tr>\n" +
                 " </table> </html>");
         MLlabel.setFont(font.deriveFont(35.0f));

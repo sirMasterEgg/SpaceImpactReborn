@@ -319,6 +319,8 @@ public class Game extends JPanel implements ActionListener{
                                 this.remove(hati1);
                                 i.setPeluruaktif(2);
 
+                            } else if (nyawa == 0){
+
                             }
                         }
                     }

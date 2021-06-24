@@ -31,7 +31,7 @@ public interface Path {
     String instructionArrowPath = "res/foto/arrow.png";
     String instructionSkill1Path = "res/foto/dead.png";
     String instructionSkill2Path = "res/foto/launcher.png";
-    String instructionSkill3Path = "res/foto/disappear.png";
+    String instructionSkill3Path = "res/foto/Barrier.png";
     String instructionMusicPath = "res/sound/ZenMode.wav";
     String instructionBack = "Back";
     MusicPlay instructionMusic = new MusicPlay();
