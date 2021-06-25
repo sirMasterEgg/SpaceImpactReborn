@@ -36,6 +36,7 @@ public class Instruction extends JPanel {
         kamikaze();
         Mlaucher();
         Invisibel();
+        pauseMenu();
     }
     private void drawDirection() {
         ImageIcon logo = new ImageIcon(ImageClass.scaleImage(Path.instructionArrowPath,0.4));
@@ -47,29 +48,29 @@ public class Instruction extends JPanel {
     }
 
     private void kamikazeDirection(){
-        ImageIcon killself = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill1Path, 0.2));
+        ImageIcon killself = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill1Path, 0.125));
         JLabel logoLabel = new JLabel();
         logoLabel.setIcon(killself);
         logoLabel.setHorizontalAlignment(JLabel.LEADING);
-        logoLabel.setBounds(40, 150, ImageClass.imgWidth(), ImageClass.imgHeight());
+        logoLabel.setBounds(90, 175, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logoLabel);
     }
 
     private void missileDirection(){
-        ImageIcon launcher = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill2Path, 0.2));
+        ImageIcon launcher = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill2Path, 0.125));
         JLabel logolabel = new JLabel();
         logolabel.setIcon(launcher);
         logolabel.setHorizontalAlignment(JLabel.LEADING);
-        logolabel.setBounds(50, 300, ImageClass.imgWidth(), ImageClass.imgHeight());
+        logolabel.setBounds(100, 300, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logolabel);
     }
 
     private void invisibelDirection(){
-        ImageIcon disappear = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill3Path, 2.5));
+        ImageIcon disappear = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill3Path, 1.75));
         JLabel logolabel = new JLabel();
         logolabel.setIcon(disappear);
         logolabel.setHorizontalAlignment(JLabel.LEADING);
-        logolabel.setBounds(80, 475, ImageClass.imgWidth(), ImageClass.imgHeight());
+        logolabel.setBounds(120, 440, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logolabel);
     }
 
@@ -111,7 +112,7 @@ public class Instruction extends JPanel {
 
     private void Mlaucher(){
         //missile launcher => hotkey(...)
-        Rectangle rect = new Rectangle(300,250,700,300);
+        Rectangle rect = new Rectangle(300,250,700,250);
         JLabel MLlabel = new JLabel("<html> <table> \n" +
                 "   <tr>\n "+
                 "       <td> -by pressing the (A) button shoot 3 bullet at the same time" +
@@ -126,7 +127,7 @@ public class Instruction extends JPanel {
 
     private void Invisibel(){
         //invisibility => hotkey(...)
-        Rectangle rect = new Rectangle(300,400,800,300);
+        Rectangle rect = new Rectangle(300,400,800,200);
         JLabel Ilabel = new JLabel("<html> <table> \n" +
                 "   <tr>\n " +
                 "       <td> -become immune from enemy attack for 3 seconds by pressing (c)\n" +
@@ -136,6 +137,19 @@ public class Instruction extends JPanel {
         Ilabel.setBounds(rect);
         Ilabel.setVisible(true);
         this.add(Ilabel);
+    }
+
+    private void pauseMenu(){
+        Rectangle rect = new Rectangle(300,400,800,400);
+        JLabel label = new JLabel("<html> <table>\n"+
+                "<tr>\n"+
+                "<td> -For pause you can click (P)\n"
+        );
+        label.setFont(font.deriveFont(35.0f));
+        label.setForeground(new Color(255,255,255));
+        label.setBounds(rect);
+        label.setVisible(true);
+        this.add(label);
     }
 
     private void drawSkill1() {
