@@ -743,6 +743,7 @@ public class Game extends JPanel implements ActionListener{
                     shoot = 1;
                 }
             }
+
             switch (e.getKeyChar()){
                 case 'w':
                     yp-=15;
@@ -769,7 +770,7 @@ public class Game extends JPanel implements ActionListener{
 
                 case 'p':
                     try {
-                        Thread.sleep(100000);
+                        Thread.sleep(2000);
                     } catch (InterruptedException interruptedException) {
                         interruptedException.printStackTrace();
                     }

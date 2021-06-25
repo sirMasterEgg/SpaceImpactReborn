@@ -162,14 +162,12 @@ public class Instruction extends JPanel {
     }
 
     private void backButton() {
-        //create button
         JButton backButton;
         Rectangle rect = new Rectangle(400, 600, 200, 100);
         backButton = new ButtonMaker("Back", rect).getButton();
         backButton.setFont(font);
         backButton.setVisible(true);
         this.add(backButton);
-        //button command
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -179,7 +177,6 @@ public class Instruction extends JPanel {
         });
     }
 
-    // render background
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;

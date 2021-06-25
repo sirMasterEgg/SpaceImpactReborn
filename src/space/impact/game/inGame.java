@@ -100,6 +100,7 @@ public class inGame extends JPanel {
 //                Path.clickForward.playMusic(Commons.forwardClick);
                 //Changing panel and start the game
 //                Play.frame2.setContentPane();
+                Play.frame2.setContentPane(new highscore());
                 Play.frame2.pack();
             }
         });
