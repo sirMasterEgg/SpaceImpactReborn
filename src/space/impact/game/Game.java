@@ -110,6 +110,11 @@ public class Game extends JPanel implements ActionListener{
     public void draw(Graphics g) {
         g.setColor(Color.black);
         if(running) {
+
+            if(nyawa==0){ //INI TEMPAT GAME OVER ()
+
+            }
+
             if (pause == 0){
 
 
