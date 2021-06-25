@@ -32,6 +32,7 @@ public class Game extends JPanel implements ActionListener{
     int cheat=0;
     int time=0;
     int tx = 0;
+    int pause=0;
     JLabel Background ;
     JLabel pesawat ;
     JLabel hati1 ;
@@ -109,35 +110,41 @@ public class Game extends JPanel implements ActionListener{
     public void draw(Graphics g) {
         g.setColor(Color.black);
         if(running) {
-            if(time==3){
-                only=10;
+            if (pause == 0){
+
+
+                g.setColor(Color.black);
+            g.setFont(new Font("Imprint MT Shadow", Font.BOLD, 15));
+            g.drawString(" Score :  " + score, 10, 15);
+            if (time == 3) {
+                only = 10;
                 this.remove(barrier);
-                time=0;
+                time = 0;
             }
-            if(tx==30){
-                tx=0;
+            if (tx == 30) {
+                tx = 0;
                 time++;
             }
-            if(only==1){
-                barrier=new JLabel(new ImageIcon("res/foto/barrier.png"));
+            if (only == 1) {
+                barrier = new JLabel(new ImageIcon("res/foto/barrier.png"));
                 barrier.setSize(100, 100);
-                barrier.setLocation(xp-30,yp-27);
+                barrier.setLocation(xp - 30, yp - 27);
                 this.add(barrier);
-                only=2;
+                only = 2;
             }
 
-            if(only==2){
+            if (only == 2) {
                 tx++;
                 this.remove(barrier);
-                barrier=new JLabel(new ImageIcon("res/foto/barrier.png"));
+                barrier = new JLabel(new ImageIcon("res/foto/barrier.png"));
                 barrier.setSize(100, 100);
-                barrier.setLocation(xp-30,yp-27);
+                barrier.setLocation(xp - 30, yp - 27);
                 this.add(barrier);
             }
 
-            if(wave==2){
+            if (wave == 2) {
                 delay++;
-                if(delay==100) {
+                if (delay == 100) {
                     bots.add(new Bot(700, 100, 1, 1));
                     bots.add(new Bot(850, 50, 1, 1));
                     bots.add(new Bot(700, 250, 1, 1));
@@ -154,38 +161,13 @@ public class Game extends JPanel implements ActionListener{
                             i.setDelaybot(i.getDelaybot() + 1);
                         }
                     }
-                    delay=0;
+                    delay = 0;
                     wave = 0;
                 }
             }
-            if(wave==3){
+            if (wave == 3) {
                 delay++;
-                if(delay==100) {
-                    bots.add(new Bot(700, 100, 1, 1));
-                    bots.add(new Bot(850, 50, 1, 1));
-                    bots.add(new Bot(700, 250, 1, 1));
-                    bots.add(new Bot(850, 200, 1, 1));
-                    bots.add(new Bot(700, 400, 1, 1));
-                    bots.add(new Bot(850, 350, 1, 1));
-                    bots.add(new Bot(700, 550, 1, 1));
-                    bots.add(new Bot(850, 500, 1, 1));
-                    for (Bot i : bots) {
-                        if (i.getJenisbot() == 1) {
-                            i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                            i.getSprite().setSize(100, 100);
-                            i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                            this.add(i.getSprite());
-                            i.setDelaybot(i.getDelaybot() + 1);
-                        }
-                    }
-                    delay=0;
-                    wave = 0;
-                }
-            }
-
-            if(wave==4){
-                delay++;
-                if(delay==100) {
+                if (delay == 100) {
                     bots.add(new Bot(700, 100, 1, 1));
                     bots.add(new Bot(850, 50, 1, 1));
                     bots.add(new Bot(700, 250, 1, 1));
@@ -203,14 +185,39 @@ public class Game extends JPanel implements ActionListener{
                             i.setDelaybot(i.getDelaybot() + 1);
                         }
                     }
-                    delay=0;
+                    delay = 0;
                     wave = 0;
                 }
             }
 
-            if(wave==5){
+            if (wave == 4) {
                 delay++;
-                if(delay==100) {
+                if (delay == 100) {
+                    bots.add(new Bot(700, 100, 1, 1));
+                    bots.add(new Bot(850, 50, 1, 1));
+                    bots.add(new Bot(700, 250, 1, 1));
+                    bots.add(new Bot(850, 200, 1, 1));
+                    bots.add(new Bot(700, 400, 1, 1));
+                    bots.add(new Bot(850, 350, 1, 1));
+                    bots.add(new Bot(700, 550, 1, 1));
+                    bots.add(new Bot(850, 500, 1, 1));
+                    for (Bot i : bots) {
+                        if (i.getJenisbot() == 1) {
+                            i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                            i.getSprite().setSize(100, 100);
+                            i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                            this.add(i.getSprite());
+                            i.setDelaybot(i.getDelaybot() + 1);
+                        }
+                    }
+                    delay = 0;
+                    wave = 0;
+                }
+            }
+
+            if (wave == 5) {
+                delay++;
+                if (delay == 100) {
                     bots.add(new Bot(850, 50, 1, 1));
                     bots.add(new Bot(850, 200, 1, 1));
                     bots.add(new Bot(850, 350, 1, 1));
@@ -231,14 +238,14 @@ public class Game extends JPanel implements ActionListener{
                             i.setDelaybot(i.getDelaybot() + 1);
                         }
                     }
-                    delay=0;
+                    delay = 0;
                     wave = 0;
                 }
             }
 
-            if(wave==6){
+            if (wave == 6) {
                 delay++;
-                if(delay==100) {
+                if (delay == 100) {
                     bots.add(new Bot(850, 50, 1, 1));
                     bots.add(new Bot(850, 200, 1, 1));
                     bots.add(new Bot(850, 350, 1, 1));
@@ -258,14 +265,14 @@ public class Game extends JPanel implements ActionListener{
                             i.setDelaybot(i.getDelaybot() + 1);
                         }
                     }
-                    delay=0;
+                    delay = 0;
                     wave = 0;
                 }
             }
 
-            if(wave==7){
+            if (wave == 7) {
                 delay++;
-                if(delay==100) {
+                if (delay == 100) {
                     bots.add(new Bot(700, 100, 1, 1));
                     bots.add(new Bot(850, 50, 1, 1));
                     bots.add(new Bot(700, 250, 1, 1));
@@ -286,14 +293,14 @@ public class Game extends JPanel implements ActionListener{
                             i.setDelaybot(i.getDelaybot() + 1);
                         }
                     }
-                    delay=0;
+                    delay = 0;
                     wave = 0;
                 }
             }
 
-            if(wave==8){
+            if (wave == 8) {
                 delay++;
-                if(delay==100) {
+                if (delay == 100) {
                     bots.add(new Bot(700, 100, 1, 1));
                     bots.add(new Bot(850, 50, 1, 1));
                     bots.add(new Bot(700, 250, 1, 1));
@@ -315,14 +322,14 @@ public class Game extends JPanel implements ActionListener{
                             i.setDelaybot(i.getDelaybot() + 1);
                         }
                     }
-                    delay=0;
+                    delay = 0;
                     wave = 0;
                 }
             }
 
-            if(wave==9){
+            if (wave == 9) {
                 delay++;
-                if(delay==100) {
+                if (delay == 100) {
                     bots.add(new Bot(700, 50, 1, 1));
                     bots.add(new Bot(850, 50, 1, 1));
                     bots.add(new Bot(700, 200, 1, 1));
@@ -347,14 +354,14 @@ public class Game extends JPanel implements ActionListener{
                             i.setDelaybot(i.getDelaybot() + 1);
                         }
                     }
-                    delay=0;
+                    delay = 0;
                     wave = 0;
                 }
             }
 
-            if(wave==10){
+            if (wave == 10) {
                 delay++;
-                if(delay==100) {
+                if (delay == 100) {
                     bots.add(new Bot(700, 50, 1, 1));
                     bots.add(new Bot(850, 50, 1, 1));
                     bots.add(new Bot(700, 200, 1, 1));
@@ -382,36 +389,35 @@ public class Game extends JPanel implements ActionListener{
                             i.setDelaybot(i.getDelaybot() + 1);
                         }
                     }
-                    delay=0;
+                    delay = 0;
                     wave = 0;
                 }
             }
 
 
-
-            for(Bot i : bots){
-                if (i.getJenisbot()== 1) {
+            for (Bot i : bots) {
+                if (i.getJenisbot() == 1) {
                     this.remove(i.getSprite());
                     i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
-                    i.setDelaybot(i.getDelaybot()+1);
+                    i.setDelaybot(i.getDelaybot() + 1);
                 } else if (i.getJenisbot() == 2) {
                     this.remove(i.getSprite());
                     i.setSprite(new JLabel(new ImageIcon("res/foto/2.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
-                    i.setDelaybot(i.getDelaybot()+1);
+                    i.setDelaybot(i.getDelaybot() + 1);
 
-                } else if (i.getJenisbot()== 3) {
+                } else if (i.getJenisbot() == 3) {
                     this.remove(i.getSprite());
                     i.setSprite(new JLabel(new ImageIcon("res/foto/3.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
-                    i.setDelaybot(i.getDelaybot()+1);
+                    i.setDelaybot(i.getDelaybot() + 1);
 
                 } else if (i.getJenisbot() == 4) {
                     this.remove(i.getSprite());
@@ -419,7 +425,7 @@ public class Game extends JPanel implements ActionListener{
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
-                    i.setDelaybot(i.getDelaybot()+1);
+                    i.setDelaybot(i.getDelaybot() + 1);
 
                 } else if (i.getJenisbot() == 5) {
                     this.remove(i.getSprite());
@@ -427,7 +433,7 @@ public class Game extends JPanel implements ActionListener{
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
-                    i.setDelaybot(i.getDelaybot()+1);
+                    i.setDelaybot(i.getDelaybot() + 1);
 
                 } else if (i.getJenisbot() == 6) {
                     this.remove(i.getSprite());
@@ -435,7 +441,7 @@ public class Game extends JPanel implements ActionListener{
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
-                    i.setDelaybot(i.getDelaybot()+1);
+                    i.setDelaybot(i.getDelaybot() + 1);
 
                 } else if (i.getJenisbot() == 7) {
                     this.remove(i.getSprite());
@@ -443,96 +449,129 @@ public class Game extends JPanel implements ActionListener{
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
-                    i.setDelaybot(i.getDelaybot()+1);
+                    i.setDelaybot(i.getDelaybot() + 1);
 
-                } else if (i.getJenisbot()== 8) {
+                } else if (i.getJenisbot() == 8) {
                     this.remove(i.getSprite());
                     i.setSprite(new JLabel(new ImageIcon("res/foto/8.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getXbot(), i.getYbot());
                     this.add(i.getSprite());
-                    i.setDelaybot(i.getDelaybot()+1);
+                    i.setDelaybot(i.getDelaybot() + 1);
                 }
-                if (i.getDelaybot()== 5) {
-                    if (i.getJenisbot()== 1) {
+                if (i.getDelaybot() == 5) {
+                    if (i.getJenisbot() == 1) {
                         i.setJenisbot(2);
                     } else if (i.getJenisbot() == 2) {
                         i.setJenisbot(3);
                     } else if (i.getJenisbot() == 3) {
                         i.setJenisbot(4);
-                    } else if (i.getJenisbot()== 4) {
+                    } else if (i.getJenisbot() == 4) {
                         i.setJenisbot(5);
                     } else if (i.getJenisbot() == 5) {
                         i.setJenisbot(6);
-                    } else if (i.getJenisbot()== 6) {
+                    } else if (i.getJenisbot() == 6) {
                         i.setJenisbot(7);
-                    } else if (i.getJenisbot()== 7) {
+                    } else if (i.getJenisbot() == 7) {
                         i.setJenisbot(8);
-                    } else if (i.getJenisbot()== 8) {
+                    } else if (i.getJenisbot() == 8) {
                         i.setJenisbot(1);
                     }
                     i.setDelaybot(1);
                 }
             }
-            if(cekwave[0]==3){ //1
-                wave=2;
-                cekwave[0]=0;
-                cek++;
-            }
-            if(cekwave[1]==7){ //2
-                wave=3;
-                cekwave[1]=0;
-                cek++;
-            }
-            if(cekwave[2]==8){ //3
-                wave=4;
-                cekwave[2]=0;
-                cek++;
-            }
-            if(cekwave[3]==8){ //4
-                wave=5;
-                cekwave[3]=0;
-                cek++;
-            }
+            if (cekwave[0] == 3) { //1
+                if (nyawa != 0) {
+                    score = score * nyawa;
+                }
 
-            if(cekwave[4]==9){ //5
-                wave=6;
-                cekwave[4]=0;
+                wave = 2;
+                cekwave[0] = 0;
                 cek++;
             }
+            if (cekwave[1] == 7) { //2
+                if (nyawa != 0) {
+                    score = score * nyawa;
+                }
 
-            if(cekwave[5]==10){//6
-                wave=7;
-                cekwave[5]=0;
+                wave = 3;
+                cekwave[1] = 0;
                 cek++;
             }
+            if (cekwave[2] == 8) { //3
+                if (nyawa != 0) {
+                    score = score * nyawa;
+                }
 
-            if(cekwave[6]==11){ //7
-                wave=8;
-                cekwave[6]=0;
+                wave = 4;
+                cekwave[2] = 0;
                 cek++;
             }
+            if (cekwave[3] == 8) { //4
+                if (nyawa != 0) {
+                    score = score * nyawa;
+                }
 
-            if(cekwave[7]==12){ //8
-                wave=9;
-                cekwave[7]=0;
+                wave = 5;
+                cekwave[3] = 0;
                 cek++;
             }
 
-            if(cekwave[8]==15){ //9
-                wave=10;
-                cekwave[8]=0;
+            if (cekwave[4] == 9) { //5
+                if (nyawa != 0) {
+                    score = score * nyawa;
+                }
+
+                wave = 6;
+                cekwave[4] = 0;
+                cek++;
+            }
+
+            if (cekwave[5] == 10) {//6
+                if (nyawa != 0) {
+                    score = score * nyawa;
+                }
+
+                wave = 7;
+                cekwave[5] = 0;
+                cek++;
+            }
+
+            if (cekwave[6] == 11) { //7
+                if (nyawa != 0) {
+                    score = score * nyawa;
+                }
+
+                wave = 8;
+                cekwave[6] = 0;
+                cek++;
+            }
+
+            if (cekwave[7] == 12) { //8
+                if (nyawa != 0) {
+                    score = score * nyawa;
+                }
+
+                wave = 9;
+                cekwave[7] = 0;
+                cek++;
+            }
+
+            if (cekwave[8] == 15) { //9
+                if (nyawa != 0) {
+                    score = score * nyawa;
+                }
+
+                wave = 10;
+                cekwave[8] = 0;
                 cek++;
             }
 
 
-
-
-
-            if(TEMBAK==1){
-                bullet.add(new peluru(xp+15,yp-25,0));
-                TEMBAK=0;
-                for(peluru i : bullet) {
+            if (TEMBAK == 1) {
+                bullet.add(new peluru(xp + 15, yp - 25, 0));
+                TEMBAK = 0;
+                for (peluru i : bullet) {
                     if (i.getPeluruaktif() == 0) {
                         i.setSprite(new JLabel(new ImageIcon("res/foto/unnamed.png")));
                         i.getSprite().setSize(100, 100);
@@ -543,31 +582,32 @@ public class Game extends JPanel implements ActionListener{
                 }
             }
 
-            for(Bot i : bots){
+            for (Bot i : bots) {
 
                 int randomizer = rn.nextInt(100) + 1;
-                if(randomizer==1 || randomizer==2 ){
-                    tembakanbot=1;
-                    bulletM.add(new peluruMusuh(i.getXbot()-50,i.getYbot()-25,1));
+                if (randomizer == 1 || randomizer == 2) {
+                    tembakanbot = 1;
+                    bulletM.add(new peluruMusuh(i.getXbot() - 50, i.getYbot() - 25, 1));
 
                 }
             }
-            for(peluruMusuh i : bulletM){
-                if(i.getPeluruaktif()==1) {
-                    i.setPelurux(i.getPelurux()-15);
+            for (peluruMusuh i : bulletM) {
+                if (i.getPeluruaktif() == 1) {
+                    i.setPelurux(i.getPelurux() - 15);
                     i.setSprite(new JLabel(new ImageIcon("res/foto/lasergreen.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getPelurux(), i.getPeluruy());
                     this.add(i.getSprite());
                     i.setPeluruaktif(0);
-                }if(i.getPeluruaktif()==0) {
-                    i.setPelurux(i.getPelurux()-15);
+                }
+                if (i.getPeluruaktif() == 0) {
+                    i.setPelurux(i.getPelurux() - 15);
                     this.remove(i.getSprite());
                     i.setSprite(new JLabel(new ImageIcon("res/foto/lasergreen.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getPelurux(), i.getPeluruy());
                     this.add(i.getSprite());
-                    if(only!=2) {
+                    if (only != 2) {
                         if (xp + 3 >= i.getPelurux() && yp - 50 <= i.getPeluruy() && yp >= i.getPeluruy()) {
                             if (nyawa == 3) {
                                 nyawa--;
@@ -582,39 +622,36 @@ public class Game extends JPanel implements ActionListener{
                                 this.remove(hati1);
                                 i.setPeluruaktif(2);
 
-                            } else if (nyawa == 0){
-
-
                             }
                         }
                     }
                 }
-                if(i.getPelurux()<15){
+                if (i.getPelurux() < 15) {
                     i.setPeluruaktif(2);
                 }
             }
-            for(peluruMusuh i : bulletM){
-                if(i.getPeluruaktif()==2){
+            for (peluruMusuh i : bulletM) {
+                if (i.getPeluruaktif() == 2) {
                     this.remove(i.getSprite());
                     bulletM.remove(i);
                     break;
                 }
             }
-            if(Start==0){
-                for(peluru i : bullet){
+            if (Start == 0) {
+                for (peluru i : bullet) {
                     this.remove(i.getSprite());
                     i.setSprite(new JLabel(new ImageIcon("res/foto/unnamed.png")));
                     i.getSprite().setSize(100, 100);
                     i.getSprite().setLocation(i.getPelurux(), i.getPeluruy());
                     this.add(i.getSprite());
-                    if(i.getPelurux()>=900){
+                    if (i.getPelurux() >= 900) {
                         this.remove(i.getSprite());
                         bullet.remove(i);
                         break;
                     }
-                    for(Bot j : bots){
-                        if(j.getXbot()<=i.getPelurux()&& j.getXbot()+60>=i.getPelurux() && j.getYbot()-50<=i.getPeluruy() && j.getYbot()+20>=i.getPeluruy()){
-                            score+=2;
+                    for (Bot j : bots) {
+                        if (j.getXbot() <= i.getPelurux() && j.getXbot() + 60 >= i.getPelurux() && j.getYbot() - 50 <= i.getPeluruy() && j.getYbot() + 20 >= i.getPeluruy()) {
+                            score += 2;
                             this.remove(j.getSprite());
                             bots.remove(j);
                             cekwave[cek]++;
@@ -622,17 +659,17 @@ public class Game extends JPanel implements ActionListener{
                         }
                     }
                 }
-                if(cheat==1){
-                    for(Bot j : bots){
+                if (cheat == 1) {
+                    for (Bot j : bots) {
 
-                        score+=2;
+                        score += 2;
                         this.remove(j.getSprite());
                         bots.remove(j);
                         cekwave[cek]++;
                         break;
 
                     }
-                    cheat=0;
+                    cheat = 0;
                 }
                 this.remove(pesawat);
                 pesawat = new JLabel(new ImageIcon("res/foto/hero.png"));
@@ -645,6 +682,7 @@ public class Game extends JPanel implements ActionListener{
                 Background.setLocation(0, 0);
                 this.add(Background);
             }
+        }
         }
 
     }
@@ -722,13 +760,15 @@ public class Game extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(running) {
-            moveBot();
+            if (pause == 0){
+                moveBot();
             tubruk();
             try {
                 sound();
             } catch (LineUnavailableException | UnsupportedAudioFileException | IOException lineUnavailableException) {
                 lineUnavailableException.printStackTrace();
             }
+        }
         }
         repaint();
     }
@@ -758,10 +798,14 @@ public class Game extends JPanel implements ActionListener{
                     break;
 
                 case 'd':
-                    xp+=15;
+                    if(xp<=200){
+                        xp+=15;
+                    }
                     break;
                 case 'a':
-                    xp-=15;
+                    if(xp>=30){
+                        xp-=15;
+                    }
                     break;
 
                 case 'k':
@@ -769,10 +813,10 @@ public class Game extends JPanel implements ActionListener{
                     break;
 
                 case 'p':
-                    try {
-                        Thread.sleep(2000);
-                    } catch (InterruptedException interruptedException) {
-                        interruptedException.printStackTrace();
+                    if(pause==0){
+                        pause=1;
+                    }else if(pause==1){
+                        pause=0;
                     }
                     break;
 
