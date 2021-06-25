@@ -11,8 +11,7 @@ public class peluru {
         return sprite;
     }
 
-    public void setSprite(JLabel sprite) {
-        this.sprite = sprite;
+    public void setSprite(JLabel sprite) {this.sprite = sprite;
     }
 
     protected JLabel sprite;
