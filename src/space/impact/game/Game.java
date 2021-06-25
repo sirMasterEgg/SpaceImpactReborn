@@ -587,6 +587,24 @@ public class Game extends JPanel implements ActionListener{
                 }
             }
 
+                if (TEMBAK == 2) {
+                    bullet.add(new peluru(xp + 15, yp - 35, 0));
+                    bullet.add(new peluru(xp + 15, yp - 15, 0));
+                    bullet.add(new peluru(xp + 15, yp - -5, 0));
+                    bullet.add(new peluru(xp + 15, yp - 55, 0));
+                    bullet.add(new peluru(xp + 15, yp - -25, 0));
+                    TEMBAK = 0;
+                    for (peluru i : bullet) {
+                        if (i.getPeluruaktif() == 0) {
+                            i.setSprite(new JLabel(new ImageIcon("res/foto/unnamed.png")));
+                            i.getSprite().setSize(120, 120);
+                            i.getSprite().setLocation(i.getPelurux(), i.getPeluruy());
+                            this.add(i.getSprite());
+                            i.setPeluruaktif(1);
+                        }
+                    }
+                }
+
             for (Bot i : bots) {
 
                 int randomizer = rn.nextInt(100) + 1;
@@ -785,6 +803,14 @@ public class Game extends JPanel implements ActionListener{
                 if (delayp == 1) {
                     delayp = 0;
                     TEMBAK = 1;
+                    shoot = 1;
+                }
+            }
+
+            if (e.getKeyCode() == KeyEvent.VK_F){
+                if (delayp == 1) {
+                    delayp = 0;
+                    TEMBAK = 2;
                     shoot = 1;
                 }
             }

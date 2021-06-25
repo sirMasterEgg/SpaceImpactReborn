@@ -16,7 +16,6 @@ public class loginawal {
     private static final JFrame frame = new JFrame("Login");
 
             public static void main(String[] args) {
-                int juan = 1;
                 JFrame frame = new JFrame();
                 frame.setSize(960, 540);
                 frame.setLayout(null);
