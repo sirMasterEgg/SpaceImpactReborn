@@ -114,6 +114,7 @@ public class Game extends JPanel implements ActionListener{
         super.paintComponent(g);
         draw(g);
     }
+
     public void draw(Graphics g) {
         g.setColor(Color.black);
         if(running) {
@@ -132,7 +133,6 @@ public class Game extends JPanel implements ActionListener{
             }
 
             if (pause == 0){
-
 
                 g.setColor(Color.black);
             g.setFont(new Font("Imprint MT Shadow", Font.BOLD, 15));
@@ -163,24 +163,29 @@ public class Game extends JPanel implements ActionListener{
                 this.add(barrier);
             }
 
-            if (wave == 2) {
-                delay++;
-                if (delay == 100) {
-                    bos.add(new boss(400, 100, 1, 1));
-
-                    for (boss i : bos) {
-                        if (i.getJenisbos() == 1) {
-                            i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-1.png")));
-                            i.getSprite().setSize(100, 100);
-                            i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                            this.add(i.getSprite());
-                            i.setDelaybos(i.getDelaybos() + 1);
+                if(wave==2){
+                    delay++;
+                    if(delay==100) {
+                        bots.add(new Bot(700, 100, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 250, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 400, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
                         }
+                        delay=0;
+                        wave = 0;
                     }
-                    delay = 0;
-                    wave = 0;
                 }
-            }
             if (wave == 3) {
                 delay++;
                 if (delay == 100) {
