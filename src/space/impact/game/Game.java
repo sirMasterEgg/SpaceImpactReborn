@@ -94,7 +94,9 @@ public class Game extends JPanel implements ActionListener{
         }
         startGame();
     }
+    public void menu(){
 
+    }
     public void startGame() {
         running = true;
         timer = new Timer(DELAY,this);
