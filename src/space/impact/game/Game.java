@@ -1,8 +1,5 @@
 package space.impact.game;
-import space.impact.source.MyFileHandler;
-import space.impact.source.Path;
-import space.impact.source.PlayerInfo;
-import space.impact.source.TextClass;
+import space.impact.source.*;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -97,13 +94,22 @@ public class Game extends JPanel implements ActionListener{
             Background.setLocation(0, 0);
             this.setLayout(null);
             this.setPreferredSize(new Dimension(1000,700));
-            this.setBackground(Color.white);
+            this.setBackground(Color.blue);
             this.setFocusable(true);
             this.addKeyListener(new MyKeyAdapter());
             this.add(Background);
 
         }
         startGame();
+        scoreBG();
+    }
+    private void scoreBG(){
+        ImageIcon lightning = new ImageIcon(ImageClass.scaleImage(Path.scoreBackground, 0.175));
+        JLabel logoLabel = new JLabel();
+        logoLabel.setIcon(lightning);
+        logoLabel.setHorizontalAlignment(JLabel.LEADING);
+        logoLabel.setBounds(10, 0, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(logoLabel);
     }
     public void startGame() {
         running = true;
@@ -116,7 +122,7 @@ public class Game extends JPanel implements ActionListener{
     }
 
     public void draw(Graphics g) {
-        g.setColor(Color.black);
+        g.setColor(Color.CYAN);
         if(running) {
 
             if (nyawa == 0) { //INI TEMPAT GAME OVER ()
@@ -140,7 +146,7 @@ public class Game extends JPanel implements ActionListener{
 
                 if (pause == 0) {
 
-                g.setColor(Color.black);
+                g.setColor(Color.cyan);
                 g.setFont(new Font("Imprint MT Shadow", Font.BOLD, 15));
                 g.drawString(" Score :  " + score, 10, 15);
                 if (time == 3) {
