@@ -62,9 +62,6 @@ public class inGame extends JPanel {
                 }
             }
         });
-
-
-
     }
 
     private void instructionButton() {
