@@ -11,8 +11,10 @@ public class inGame extends JPanel {
 
     private Image bg;
     private Font font = new FontMaker(Path.mainFont).getFont();
+    private String usertemp;
 
-    public inGame() {
+    public inGame(String usertemp) {
+        this.usertemp=usertemp;
         // main menu
         //play music
         Path.mainMenuMusic.playMusic(Path.mainMenuMusicPath);
@@ -57,8 +59,10 @@ public class inGame extends JPanel {
 //                Play.frame2.setContentPane();
                 Play.frame2.pack();
                 if(button.isEnabled()){
-                    newGame n = new newGame();
+                    newGame n = new newGame(usertemp);
                     Play.frame2.setVisible(false);
+                    Play.frame2.dispose();
+
                 }
             }
         });
@@ -79,7 +83,7 @@ public class inGame extends JPanel {
 //                Path.clickForward.playMusic(Commons.forwardClick);
                 //Changing panel and start the game
 //                Play.frame2 = new JFrame();
-                Play.frame2.setContentPane(new Instruction());
+                Play.frame2.setContentPane(new Instruction(usertemp));
                 Play.frame2.pack();
             }
         });
@@ -100,7 +104,7 @@ public class inGame extends JPanel {
 //                Path.clickForward.playMusic(Commons.forwardClick);
                 //Changing panel and start the game
 //                Play.frame2.setContentPane();
-                Play.frame2.setContentPane(new highscore());
+                Play.frame2.setContentPane(new highscore(usertemp));
                 Play.frame2.pack();
             }
         });

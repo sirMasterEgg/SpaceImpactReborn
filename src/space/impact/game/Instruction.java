@@ -18,9 +18,11 @@ public class Instruction extends JPanel {
 
     private Image bg;
     private Font font = new FontMaker(Path.mainFont).getFont();
+    private String usertemp;
 
 
-    public Instruction() {
+    public Instruction(String usertemp) {
+        this.usertemp=usertemp;
         //set display, bg
         setPreferredSize(Path.frameSize);
         this.bg = new ImageIcon(Path.bgMainMenu).getImage();
@@ -171,7 +173,7 @@ public class Instruction extends JPanel {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Play.frame2.setContentPane(new inGame());
+                Play.frame2.setContentPane(new inGame(usertemp));
                 Play.frame2.pack();
             }
         });

@@ -13,6 +13,7 @@ public class loginawal {
     private JPanel menulogin;
     private JTextField inputannama;
     private JButton mainbutton;
+    private static String usertemp;
 
     private static final JFrame frame = new JFrame("Login");
 
@@ -48,8 +49,10 @@ public class loginawal {
                             JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning", JOptionPane.ERROR_MESSAGE);
                         }else {
                             if (confirmnama.isEnabled()) {
-                                Play f = new Play(new JFrame("Space Impact Reborn"));
+                                usertemp=nama.getText();
+                                Play f = new Play(new JFrame("Space Impact Reborn"),usertemp);
                                 frame.setVisible(false);
+                                frame.dispose();
                             }
                         }
                     }
@@ -63,8 +66,10 @@ public class loginawal {
                                 JOptionPane.showMessageDialog(null,"Nama tidak boleh kosong!","Warning",JOptionPane.ERROR_MESSAGE);
                             }else {
                                 if (confirmnama.isEnabled()) {
-                                    Play f = new Play(new JFrame("Space Impact Reborn"));
+                                    usertemp=nama.getText();
+                                    Play f = new Play(new JFrame("Space Impact Reborn"),usertemp);
                                     frame.setVisible(false);
+                                    frame.dispose();
                                 }
                             }
                         }
