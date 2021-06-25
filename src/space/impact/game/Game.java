@@ -166,11 +166,11 @@ public class Game extends JPanel implements ActionListener{
             if (wave == 2) {
                 delay++;
                 if (delay == 100) {
-                    bos.add(new boss(700, 100, 1, 1));
+                    bos.add(new boss(400, 100, 1, 1));
 
                     for (boss i : bos) {
                         if (i.getJenisbos() == 1) {
-                            i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                            i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-1.png")));
                             i.getSprite().setSize(100, 100);
                             i.getSprite().setLocation(i.getXbos(), i.getYbos());
                             this.add(i.getSprite());
@@ -1003,6 +1003,29 @@ public class Game extends JPanel implements ActionListener{
 
     }
 
+    public void movebos(){
+        for (boss i : bos){
+            if(atasbawah==0){
+                i.setYbos(i.getYbos()+5);
+            }
+            if(atasbawah==1){
+                i.setYbos(i.getYbos()-5);
+            }
+        }
+        for (boss i : bos){
+            if(atasbawah==0){
+                if(i.getYbos()==600){
+                    atasbawah=1;
+                }
+            }
+            if(atasbawah==1){
+                if(i.getYbos()==0){
+                    atasbawah=0;
+                }
+            }
+        }
+    }
+
     public void moveBot(){
 
         if(delayp==0){
@@ -1078,6 +1101,7 @@ public class Game extends JPanel implements ActionListener{
         if(running) {
             if (pause == 0){
                 moveBot();
+                movebos();
             tubruk();
             try {
                 sound();
