@@ -34,7 +34,7 @@ public interface Path {
     String instructionSkill3Path = "res/foto/Barrier.png";
     String instructionMusicPath = "res/sound/ZenMode.wav";
     String instructionBack = "Back";
-    String gamepaused = "res/foto/minipause.png";
+    String gamepaused = "res/foto/bos3.png";
     MusicPlay instructionMusic = new MusicPlay();
 
     // level selector

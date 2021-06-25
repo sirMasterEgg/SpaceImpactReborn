@@ -1,4 +1,5 @@
 package space.impact.game;
+import com.sun.org.apache.bcel.internal.generic.SWITCH;
 import space.impact.source.ButtonMaker;
 import space.impact.source.FontMaker;
 import space.impact.source.ImageClass;
@@ -43,8 +44,8 @@ public class Game extends JPanel implements ActionListener{
     JLabel hati2 ;
     JLabel hati3 ;
     JLabel barrier;
+    JLabel mainmenu;
     Timer timer;
-    JLabel pause;
 
     Game() {
         if(Start==0){
@@ -91,13 +92,10 @@ public class Game extends JPanel implements ActionListener{
             this.addKeyListener(new MyKeyAdapter());
             this.add(Background);
 
-            pause = new JLabel(new ImageIcon("res/foto/minipause.png"));
-            pause.setSize(20, 20);
-            pause.setLocation(100, 100);
-            this.add(pause);
         }
         startGame();
     }
+
     public void startGame() {
         running = true;
         timer = new Timer(DELAY,this);
@@ -497,9 +495,17 @@ public class Game extends JPanel implements ActionListener{
                 case 'a':
                     xp-=15;
                     break;
+                case 'p':
+                    try {
+                        Thread.sleep(100000);
+                    } catch (InterruptedException interruptedException) {
+                        interruptedException.printStackTrace();
+                    }
+
             }
 
         }
+
 
     }
 }
