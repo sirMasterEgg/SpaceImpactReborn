@@ -1,4 +1,9 @@
 package space.impact.game;
+import space.impact.source.MyFileHandler;
+import space.impact.source.Path;
+import space.impact.source.PlayerInfo;
+import space.impact.source.TextClass;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.sound.sampled.*;
@@ -8,6 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 public class Game extends JPanel implements ActionListener{
+    private PlayerInfo pI;
     static final int DELAY = 20;
     ArrayList<peluru> bullet = new ArrayList<>();
     ArrayList<peluruMusuh> bulletM = new ArrayList<>();
@@ -113,7 +119,16 @@ public class Game extends JPanel implements ActionListener{
         if(running) {
 
             if(nyawa==0){ //INI TEMPAT GAME OVER ()
+                MyFileHandler file = new TextClass();
+                ArrayList <String> save = file.loadBefore(Path.saveHighscore);
+                String temp = "";
 
+                JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: "+score+"</html>","You Lose", JOptionPane.INFORMATION_MESSAGE);
+
+                temp+=pI.getPlayerName()+Path.pemisahHighscore+score;
+                save.add(temp);
+                file.save(Path.saveHighscore,save);
+                //TODO keluar panel game
             }
 
             if (pause == 0){

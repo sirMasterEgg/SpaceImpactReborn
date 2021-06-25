@@ -9,8 +9,8 @@ public class TextClass extends MyFileHandler {
     }
 
     @Override
-    protected ArrayList<String> loadTemp(String path) {
-        return super.loadTemp(path);
+    public ArrayList<String> loadBefore(String path) {
+        return super.loadBefore(path);
     }
 
     @Override

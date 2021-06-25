@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -17,7 +16,7 @@ public abstract class MyFileHandler {
         //
     }
 
-    protected ArrayList<String> loadTemp(String path){
+    public ArrayList<String> loadBefore(String path){
         ArrayList<String> result = new ArrayList<>();
 
         try (Scanner s = new Scanner(new FileReader(path))) {
@@ -46,7 +45,7 @@ public abstract class MyFileHandler {
     }
 
     public ArrayList<String> loadNama(String path, String pemisah){
-        ArrayList<String> temp = loadTemp(path);
+        ArrayList<String> temp = loadBefore(path);
         ArrayList<String> nama = new ArrayList<>();
         for (String a: temp){
             nama.add(a.substring(0,a.indexOf(pemisah)));
@@ -55,7 +54,7 @@ public abstract class MyFileHandler {
     }
 
     public ArrayList<Integer> loadScore(String path, String pemisah){
-        ArrayList<String> temp = loadTemp(path);
+        ArrayList<String> temp = loadBefore(path);
         ArrayList<Integer> score = new ArrayList<>();
         for (String a: temp){
             score.add(Integer.parseInt(a.substring(a.indexOf(pemisah)+1)));

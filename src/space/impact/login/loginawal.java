@@ -1,6 +1,7 @@
 package space.impact.login;
 
 import space.impact.game.Play;
+import space.impact.source.PlayerInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,6 +17,7 @@ public class loginawal {
     private static final JFrame frame = new JFrame("Login");
 
             public static void main(String[] args) {
+                PlayerInfo<String> pI;
                 JFrame frame = new JFrame();
                 frame.setSize(960, 540);
                 frame.setLayout(null);
@@ -29,6 +31,7 @@ public class loginawal {
                 JTextField nama = new JTextField();
                 nama.setBounds(320, 300, 300, 40);
                 panellogin.add(nama);
+                pI = new PlayerInfo<>(nama.getText());
 
 
 
