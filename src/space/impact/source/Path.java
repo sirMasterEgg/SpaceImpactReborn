@@ -9,6 +9,8 @@ public interface Path {
     int HEIGHT = 700;
     Dimension frameSize = new Dimension(WIDTH, HEIGHT);
     String mainFont = "res/font/nasalization.ttf";
+    String saveHighscore = "res/highscore.txt";
+    String pemisahHighscore = "|";
 
     // button sfx
 //    String forwardClick = "res/sound/click_forward.wav";

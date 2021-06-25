@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public abstract class MyFileHandler {
@@ -30,6 +31,7 @@ public abstract class MyFileHandler {
     }
 
     public void save(String name, ArrayList<String> data){
+        Collections.sort(data, Collections.reverseOrder());
         StringBuilder temp= new StringBuilder();
         for (String a: data){
             temp.append(a).append("\n");

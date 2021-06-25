@@ -1,26 +1,59 @@
 package space.impact.game;
 
-import space.impact.source.ButtonMaker;
-import space.impact.source.FontMaker;
-import space.impact.source.ImageClass;
-import space.impact.source.Path;
+import space.impact.source.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class highscore extends JPanel {
     private Image bg;
     private Font font = new FontMaker(Path.mainFont).getFont();
+    private JLabel score;
 
     public highscore() {
         setPreferredSize(Path.frameSize);
         this.bg = new ImageIcon(Path.bgMainMenu).getImage();
         this.setLayout(null);
 
+        drawTitle();
+
+        score = new JLabel();
+        score.setText(cetakBeautyHighscore());
+        score.setForeground(Color.WHITE);
+        score.setFont(font.deriveFont(35f));
+        score.setBounds(0,0,Path.WIDTH,Path.HEIGHT);
+        score.setHorizontalAlignment(JLabel.CENTER);
+        this.add(score);
 
         backButton();
+    }
+
+    private void drawTitle(){
+        JLabel highscoreTitle = new JLabel("Highscore");
+        highscoreTitle.setForeground(Color.WHITE);
+        highscoreTitle.setFont(font);
+        highscoreTitle.setBounds(0,0,Path.WIDTH,200);
+        highscoreTitle.setHorizontalAlignment(JLabel.CENTER);
+        this.add(highscoreTitle);
+    }
+
+    private String cetakBeautyHighscore(){
+        MyFileHandler file = new TextClass();
+
+        ArrayList<String> nama = file.loadNama(Path.saveHighscore,Path.pemisahHighscore);
+        ArrayList<Integer> skor = file.loadScore(Path.saveHighscore,Path.pemisahHighscore);
+
+        StringBuilder data = new StringBuilder("<html><table>");
+
+        for (int i = 0; i < nama.size(); i++) {
+            data.append("<tr><td>").append(nama.get(i)).append("</td><td>-</td><td>").append(skor.get(i)).append("</td></tr>");
+        }
+        data.append("</table><html>");
+        String temp = String.valueOf(data);
+        return temp;
     }
 
     private void backButton() {
