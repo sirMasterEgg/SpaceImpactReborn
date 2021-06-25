@@ -12,6 +12,7 @@ public class Game extends JPanel implements ActionListener{
     ArrayList<peluru> bullet = new ArrayList<>();
     ArrayList<peluruMusuh> bulletM = new ArrayList<>();
     ArrayList<Bot> bots = new ArrayList<>();
+    ArrayList<boss> bos = new ArrayList<>();
     int Start=0;
     int xp=100;
     int yp=100;
@@ -398,7 +399,23 @@ public class Game extends JPanel implements ActionListener{
                     wave = 0;
                 }
             }
-
+            for (boss i : bos){
+                if (i.getJenisbos() == 1){
+                    this.remove(i.getSprite());
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-1.png")));
+                    i.getSprite().setSize(100, 100);
+                    i.getSprite().setLocation(i.getXbos(), i.getYbos());
+                    this.add(i.getSprite());
+                    i.setDelaybos(i.getDelaybos() + 1);
+                } else if (i.getJenisbos() == 2){
+                    this.remove(i.getSprite());
+                    i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-2.png")));
+                    i.getSprite().setSize(100, 100);
+                    i.getSprite().setLocation(i.getXbos(), i.getYbos());
+                    this.add(i.getSprite());
+                    i.setDelaybos(i.getDelaybos() + 1);
+                }
+            }
 
             for (Bot i : bots) {
                 if (i.getJenisbot() == 1) {
