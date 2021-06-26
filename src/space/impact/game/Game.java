@@ -13,6 +13,7 @@ import java.util.Random;
 public class Game extends JPanel implements ActionListener{
     private PlayerInfo<String> pI;
     private Font pixel = new FontMaker(Path.pixelFont).getFont();
+    private Font font = new FontMaker(Path.mainFont).getFont();
     static final int DELAY = 20;
     ArrayList<peluru> bullet = new ArrayList<>();
     ArrayList<peluruMusuh> bulletM = new ArrayList<>();
@@ -48,7 +49,7 @@ public class Game extends JPanel implements ActionListener{
     JLabel hati2 ;
     JLabel hati3 ;
     JLabel barrier;
-    JLabel barrierlogo;
+
 
 
 
@@ -130,15 +131,52 @@ public class Game extends JPanel implements ActionListener{
             this.addKeyListener(new MyKeyAdapter());
             this.add(Background);
 
-//            barrierlogo = new JLabel(new ImageIcon("res/foto/Barrier.png"));
-//            barrierlogo.setSize(100, 100);
-//            barrierlogo.setLocation(200, 0);
-//            this.add(barrierlogo);
+
         }
         startGame();
         missileDirection();
-        invisibelDirection();
+        barrierDirection();
+        barrierDesign();
         kamikazeDirection();
+        kamikazeDesign();
+        missileDesign();
+
+    }
+    //untuk design tampilan skill game
+    private void kamikazeDesign(){
+        //kamikaze => hotkey(...)
+        Rectangle rect = new Rectangle(640,0,750,50);
+        JLabel Klabel = new JLabel("<html> <table> \n" +
+                " =");
+        Klabel.setFont(pixel.deriveFont(35.0f));
+        Klabel.setForeground(new Color(52, 239, 0));
+        Klabel.setBounds(rect);
+        Klabel.setVisible(true);
+        this.add(Klabel);
+    }
+    private void missileDesign(){
+        //missile => hotkey(...)
+        Rectangle rect = new Rectangle(460,0,750,50);
+        JLabel Klabel = new JLabel("<html> <table> \n" +
+                " =");
+        Klabel.setFont(pixel.deriveFont(35.0f));
+        Klabel.setForeground(new Color(52, 239, 0));
+        Klabel.setBounds(rect);
+        Klabel.setVisible(true);
+        this.add(Klabel);
+    }
+    private void barrierDesign(){
+        //missile => hotkey(...)
+        Rectangle rect = new Rectangle(260,0,750,40);
+        Rectangle rect1 = new Rectangle(300,0,750,40);
+        JLabel Klabel = new  JLabel();
+        Klabel.setText("<html> <table> \n" + " = "+jumlahbarrier);
+        Klabel.setFont(font.deriveFont(35.0f));
+        Klabel.setForeground(new Color(52, 239, 0));
+        validate();
+        Klabel.setBounds(rect1);
+        Klabel.setVisible(true);
+        this.add(Klabel);
     }
     void missileDirection(){
         ImageIcon missile = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill2Path, 0.05));
@@ -148,12 +186,12 @@ public class Game extends JPanel implements ActionListener{
         logolabel.setBounds(400, 0, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logolabel);
     }
-    void invisibelDirection(){
+    void barrierDirection(){
         ImageIcon disappear = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill3Path, 0.5));
         JLabel logolabel = new JLabel();
         logolabel.setIcon(disappear);
         logolabel.setHorizontalAlignment(JLabel.LEADING);
-        logolabel.setBounds(200, 0, ImageClass.imgWidth(), ImageClass.imgHeight());
+        logolabel.setBounds(230, 5, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logolabel);
     }
     void kamikazeDirection(){
@@ -169,15 +207,16 @@ public class Game extends JPanel implements ActionListener{
         running = true;
         timer = new Timer(DELAY,this);
         timer.start();
-        
     }
+
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         draw(g);
+        barrierDesign();
     }
 
     public void draw(Graphics g) {
-        g.setColor(Color.black);
+        g.setColor(Color.white);
         if(running) {
 
             if (nyawa == 0) { //INI TEMPAT GAME OVER ()
@@ -202,7 +241,8 @@ public class Game extends JPanel implements ActionListener{
                 g.setColor(Color.green);
                 g.setFont(pixel.deriveFont(20.0f));
                 g.drawString(" SCORE  " + score, 20, 18);
-
+//                    barrierDirection();
+//                    barrierDesign();
                     if (time == 3) {
                     only = 0;
                     this.remove(barrier);
