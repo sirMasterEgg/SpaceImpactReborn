@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+
 public class Game extends JPanel implements ActionListener{
     private PlayerInfo pI;
     static final int DELAY = 20;
@@ -91,25 +92,17 @@ public class Game extends JPanel implements ActionListener{
             this.add(pesawat);
             Background = new JLabel(new ImageIcon("res/foto/bg.png"));
             Background.setSize(1000, 700);
-            Background.setLocation(0, 0);
+            Background.setLocation(100, 100);
             this.setLayout(null);
             this.setPreferredSize(new Dimension(1000,700));
-            this.setBackground(Color.blue);
+            this.setBackground(Color.black);
             this.setFocusable(true);
             this.addKeyListener(new MyKeyAdapter());
             this.add(Background);
 
         }
         startGame();
-        scoreBG();
-    }
-    private void scoreBG(){
-        ImageIcon lightning = new ImageIcon(ImageClass.scaleImage(Path.scoreBackground, 0.175));
-        JLabel logoLabel = new JLabel();
-        logoLabel.setIcon(lightning);
-        logoLabel.setHorizontalAlignment(JLabel.LEADING);
-        logoLabel.setBounds(10, 0, ImageClass.imgWidth(), ImageClass.imgHeight());
-        this.add(logoLabel);
+
     }
     public void startGame() {
         running = true;
@@ -122,7 +115,7 @@ public class Game extends JPanel implements ActionListener{
     }
 
     public void draw(Graphics g) {
-        g.setColor(Color.CYAN);
+        g.setColor(Color.black);
         if(running) {
 
             if (nyawa == 0) { //INI TEMPAT GAME OVER ()
@@ -145,10 +138,10 @@ public class Game extends JPanel implements ActionListener{
             } else{
 
                 if (pause == 0) {
+                g.setColor(Color.green);
 
-                g.setColor(Color.cyan);
-                g.setFont(new Font("Imprint MT Shadow", Font.BOLD, 15));
-                g.drawString(" Score :  " + score, 10, 15);
+                g.setFont(new Font("Imprint MT Shadow", Font.LAYOUT_NO_START_CONTEXT, 15));
+                g.drawString(" SCORE  " + score, 20, 18);
                 if (time == 3) {
                     only = 10;
                     this.remove(barrier);
