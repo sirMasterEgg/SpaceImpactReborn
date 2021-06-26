@@ -23,6 +23,8 @@ public class Game extends JPanel implements ActionListener{
     int yp=100;
     int only=0;
     int jumlahbarrier=3;
+    int onlymisil = 0;
+    int misil = 10;
     Random rn = new Random();
     int wave=1;
     int cek=0;
@@ -482,8 +484,6 @@ public class Game extends JPanel implements ActionListener{
 
                 if (wave == 11){
                     delay++;
-
-
                     if (delay == 100) {
                         bos.add(new boss(500,50,1,1));
                         for (boss i : bos) {
@@ -1920,22 +1920,22 @@ public class Game extends JPanel implements ActionListener{
                     }
                 }
 
-                if (TEMBAK == 2) {
-                    bullet.add(new peluru(xp + 15, yp - 35, 0));
-                    bullet.add(new peluru(xp + 15, yp - 15, 0));
-                    bullet.add(new peluru(xp + 15, yp - -5, 0));
-                    bullet.add(new peluru(xp + 15, yp - 55, 0));
-                    bullet.add(new peluru(xp + 15, yp - -25, 0));
-                    TEMBAK = 0;
-                    for (peluru i : bullet) {
-                        if (i.getPeluruaktif() == 0) {
-                            i.setSprite(new JLabel(new ImageIcon("res/foto/unnamed.png")));
-                            i.getSprite().setSize(120, 120);
-                            i.getSprite().setLocation(i.getPelurux(), i.getPeluruy());
-                            this.add(i.getSprite());
-                            i.setPeluruaktif(1);
+                if (TEMBAK == 2 && misil > 1) {
+                        bullet.add(new peluru(xp + 15, yp - 35, 0));
+                        bullet.add(new peluru(xp + 15, yp - 15, 0));
+                        bullet.add(new peluru(xp + 15, yp - -5, 0));
+                        bullet.add(new peluru(xp + 15, yp - 55, 0));
+                        bullet.add(new peluru(xp + 15, yp - -25, 0));
+                        TEMBAK = 0;
+                        for (peluru i : bullet) {
+                            if (i.getPeluruaktif() == 0) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/unnamed.png")));
+                                i.getSprite().setSize(120, 120);
+                                i.getSprite().setLocation(i.getPelurux(), i.getPeluruy());
+                                this.add(i.getSprite());
+                                i.setPeluruaktif(1);
+                            }
                         }
-                    }
                 }
 
                 for (Bot i : bots) {
@@ -2166,6 +2166,8 @@ public class Game extends JPanel implements ActionListener{
             }
 
             if (e.getKeyCode() == KeyEvent.VK_F){
+                misil -= 1;
+                System.out.println(misil);
                 if (delayp == 1) {
                     delayp = 0;
                     TEMBAK = 2;
@@ -2185,7 +2187,7 @@ public class Game extends JPanel implements ActionListener{
                         if(only==0){
                             only=1;
                         }
-                        jumlahbarrier--;
+                        jumlahbarrier-= 1;
                     }
                     break;
 
