@@ -1647,7 +1647,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
-
+                    misil += 2;
                     wave = 2;
                     cekwave[0] = 0;
                     cek++;
@@ -1657,7 +1657,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
-
+                    misil += 2;
                     wave = 3;
                     cekwave[1] = 0;
                     cek++;
@@ -1667,7 +1667,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
-
+                    misil += 2;
                     wave = 4;
                     cekwave[2] = 0;
                     cek++;
@@ -1677,7 +1677,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
-
+                    misil += 2;
                     wave = 5;
                     cekwave[3] = 0;
                     cek++;
@@ -1687,7 +1687,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
-
+                    misil += 2;
                     wave = 6;
                     cekwave[4] = 0;
                     cek++;
@@ -1697,7 +1697,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
-
+                    misil += 2;
                     wave = 7;
                     cekwave[5] = 0;
                     cek++;
@@ -1707,7 +1707,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
-
+                    misil += 2;
                     wave = 8;
                     cekwave[6] = 0;
                     cek++;
@@ -1718,7 +1718,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
-
+                    misil += 2;
                     wave = 9;
                     cekwave[7] = 0;
                     cek++;
@@ -1728,7 +1728,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
-
+                    misil += 2;
                     wave = 10;
                     cekwave[8] = 0;
                     cek++;
@@ -1737,6 +1737,7 @@ public class Game extends JPanel implements ActionListener{
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
+                    misil += 2;
                     wave = 11;
                     cekwave[9] = 0;
                     cek++;
@@ -1746,6 +1747,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 12;
                         cekwave[10] = 0;
                         cek++;
@@ -1754,6 +1756,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 13;
                         cekwave[11] = 0;
                         cek++;
@@ -1762,6 +1765,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 14;
                         cekwave[12] = 0;
                         cek++;
@@ -1770,6 +1774,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 15;
                         cekwave[13] = 0;
                         cek++;
@@ -1778,6 +1783,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 16;
                         cekwave[14] = 0;
                         cek++;
@@ -1786,6 +1792,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 17;
                         cekwave[15] = 0;
                         cek++;
@@ -1794,6 +1801,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 18;
                         cekwave[16] = 0;
                         cek++;
@@ -1802,6 +1810,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 19;
                         cekwave[17] = 0;
                         cek++;
@@ -1811,6 +1820,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 20;
                         cekwave[18] = 0;
                         cek++;
@@ -1828,6 +1838,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 22;
                         cekwave[20] = 0;
                         cek++;
@@ -1836,6 +1847,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 23;
                         cekwave[21] = 0;
                         cek++;
@@ -1844,6 +1856,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 24;
                         cekwave[22] = 0;
                         cek++;
@@ -1852,6 +1865,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 25;
                         cekwave[23] = 0;
                         cek++;
@@ -1860,6 +1874,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 26;
                         cekwave[24] = 0;
                         cek++;
@@ -1868,6 +1883,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 27;
                         cekwave[25] = 0;
                         cek++;
@@ -1876,6 +1892,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 11;
                         cekwave[9] = 0;
                         cek++;
@@ -1884,6 +1901,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 29;
                         cekwave[27] = 0;
                         cek++;
@@ -1892,6 +1910,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 30;
                         cekwave[28] = 0;
                         cek++;
@@ -1900,6 +1919,7 @@ public class Game extends JPanel implements ActionListener{
                         if (nyawa != 0) {
                             score = score * nyawa;
                         }
+                        misil += 2;
                         wave = 31;
                         cekwave[29] = 0;
                         cek++;
