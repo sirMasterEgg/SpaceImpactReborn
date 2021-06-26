@@ -1,4 +1,6 @@
-p|18
+l|0
+k|87818
+k|20
 jiancok|10
 ds|1432
 dsaw|22
@@ -7,6 +9,3 @@ cok|3
 budi|2
 a|0
 a|0
-asuuuu|4
-agus|1
-1|4

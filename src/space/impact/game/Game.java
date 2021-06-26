@@ -46,10 +46,12 @@ public class Game extends JPanel implements ActionListener{
     JLabel hati2 ;
     JLabel hati3 ;
     JLabel barrier;
+    JLabel barrierlogo;
+
 
 
     Timer timer;
-    int score =0;
+    int score = 0;
     private String usertemp;
     JFrame j;
     Game(String usertemp,JFrame j) {
@@ -126,14 +128,46 @@ public class Game extends JPanel implements ActionListener{
             this.addKeyListener(new MyKeyAdapter());
             this.add(Background);
 
+//            barrierlogo = new JLabel(new ImageIcon("res/foto/Barrier.png"));
+//            barrierlogo.setSize(100, 100);
+//            barrierlogo.setLocation(200, 0);
+//            this.add(barrierlogo);
         }
         startGame();
-
+        missileDirection();
+        invisibelDirection();
+        kamikazeDirection();
     }
+    void missileDirection(){
+        ImageIcon missile = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill2Path, 0.05));
+        JLabel logolabel = new JLabel();
+        logolabel.setIcon(missile);
+        logolabel.setHorizontalAlignment(JLabel.LEADING);
+        logolabel.setBounds(400, 0, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(logolabel);
+    }
+    void invisibelDirection(){
+        ImageIcon disappear = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill3Path, 0.5));
+        JLabel logolabel = new JLabel();
+        logolabel.setIcon(disappear);
+        logolabel.setHorizontalAlignment(JLabel.LEADING);
+        logolabel.setBounds(200, 0, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(logolabel);
+    }
+    void kamikazeDirection(){
+        ImageIcon killself = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill1Path, 0.04));
+        JLabel logoLabel = new JLabel();
+        logoLabel.setIcon(killself);
+        logoLabel.setHorizontalAlignment(JLabel.LEADING);
+        logoLabel.setBounds(600, 0, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(logoLabel);
+    }
+
     public void startGame() {
         running = true;
         timer = new Timer(DELAY,this);
         timer.start();
+        
     }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -165,10 +199,10 @@ public class Game extends JPanel implements ActionListener{
 
                 if (pause == 0) {
                 g.setColor(Color.green);
-
                 g.setFont(pixel.deriveFont(20.0f));
                 g.drawString(" SCORE  " + score, 20, 18);
-                if (time == 3) {
+
+                    if (time == 3) {
                     only = 0;
                     this.remove(barrier);
                     time = 0;
