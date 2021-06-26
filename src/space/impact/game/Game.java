@@ -44,6 +44,7 @@ public class Game extends JPanel implements ActionListener{
     JLabel hati2 ;
     JLabel hati3 ;
     JLabel barrier;
+    Font pixelMplus;
 
     Timer timer;
     int score =0;
@@ -140,7 +141,11 @@ public class Game extends JPanel implements ActionListener{
                 if (pause == 0) {
                 g.setColor(Color.green);
 
-                g.setFont(new Font("Imprint MT Shadow", Font.LAYOUT_NO_START_CONTEXT, 15));
+//                pixelMplus = Font.createFont(Font.TRUETYPE_FONT, new File("PixelMplus10-Regular.ttf"));
+//                GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+//                ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("PixelMplus10-Regular.ttf")));
+
+                g.setFont(new Font("PixelMplus", Font.BOLD, 15));
                 g.drawString(" SCORE  " + score, 20, 18);
                 if (time == 3) {
                     only = 10;
