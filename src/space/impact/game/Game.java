@@ -510,6 +510,10 @@ public class Game extends JPanel implements ActionListener{
                     delay++;
                 }
 
+                if (wave == 31){
+                    delay++;
+                }
+
                 for (boss i : bos) {
                     if (i.getJenisbos() == 1) {
                         this.remove(i.getSprite());
