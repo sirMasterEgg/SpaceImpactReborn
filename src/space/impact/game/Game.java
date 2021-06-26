@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Game extends JPanel implements ActionListener{
-    private PlayerInfo pI;
+    private PlayerInfo<String> pI;
     private Font pixel = new FontMaker(Path.pixelFont).getFont();
     static final int DELAY = 20;
     ArrayList<peluru> bullet = new ArrayList<>();
@@ -154,13 +154,12 @@ public class Game extends JPanel implements ActionListener{
                 String temp = "";
 
                 JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: " + score + "</html>", "You Lose", JOptionPane.INFORMATION_MESSAGE);
-                pI = new PlayerInfo(usertemp);
+                pI = new PlayerInfo<>(usertemp);
                 System.out.println(pI.getPlayerName());
                 System.out.println(score);
                 temp += pI.getPlayerName() + Path.pemisahHighscore + score;
                 save.add(temp);
                 file.save(Path.saveHighscore, save);
-                //TODO keluar panel game
             } else{
 
                 if (pause == 0) {

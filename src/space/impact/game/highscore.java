@@ -48,14 +48,25 @@ public class highscore extends JPanel {
         ArrayList<String> nama = file.loadNama(Path.saveHighscore,Path.pemisahHighscore);
         ArrayList<Integer> skor = file.loadScore(Path.saveHighscore,Path.pemisahHighscore);
 
+        if (nama.isEmpty() || skor.isEmpty()) return "";
+
         StringBuilder data = new StringBuilder("<html><table>");
 
-        for (int i = 0; i < nama.size(); i++) {
-            data.append("<tr><td>").append(nama.get(i)).append("</td><td>-</td><td>").append(skor.get(i)).append("</td></tr>");
+        if (nama.size()<5){
+            for (int i = 0; i < nama.size(); i++) {
+                data.append("<tr><td>").append(nama.get(i)).append("</td><td>-</td><td>").append(skor.get(i)).append("</td></tr>");
+            }
+        }else{
+            for (int i = 0; i < 5; i++) {
+                data.append("<tr><td>").append(nama.get(i)).append("</td><td>-</td><td>").append(skor.get(i)).append("</td></tr>");
+            }
         }
         data.append("</table><html>");
         String temp = String.valueOf(data);
         return temp;
+
+
+
     }
 
     private void backButton() {
