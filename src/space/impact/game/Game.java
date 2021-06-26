@@ -424,94 +424,812 @@ public class Game extends JPanel implements ActionListener{
 
                 if (wave == 11){
                     delay++;
+
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 12){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 13){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 14){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 15){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
+
                 }
 
                 if (wave == 16){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 17){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 18){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 19){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 18){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 19){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 20){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 21){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 22){
                     delay++;
+
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 23){
                     delay++;
+
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 24){
                     delay++;
+
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 25){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 26){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 27){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 28){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 29){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 30){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 if (wave == 31){
                     delay++;
+                    if (delay == 100) {
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.getSprite().setSize(100, 100);
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                this.add(i.getSprite());
+                                i.setDelaybot(i.getDelaybot() + 1);
+                            }
+                        }
+                        delay = 0;
+                        wave = 0;
+                    }
                 }
 
                 for (boss i : bos) {
@@ -883,7 +1601,7 @@ public class Game extends JPanel implements ActionListener{
                         i.setDelaybot(1);
                     }
                 }
-                if (cekwave[0] == 3) { //1
+                if (cekwave[0] == 3) { //2
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -892,7 +1610,7 @@ public class Game extends JPanel implements ActionListener{
                     cekwave[0] = 0;
                     cek++;
                 }
-                if (cekwave[1] == 7) { //2
+                if (cekwave[1] == 7) { //3
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -901,7 +1619,7 @@ public class Game extends JPanel implements ActionListener{
                     cekwave[1] = 0;
                     cek++;
                 }
-                if (cekwave[2] == 8) { //3
+                if (cekwave[2] == 8) { //4
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -910,7 +1628,7 @@ public class Game extends JPanel implements ActionListener{
                     cekwave[2] = 0;
                     cek++;
                 }
-                if (cekwave[3] == 8) { //4
+                if (cekwave[3] == 8) { //5
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -920,7 +1638,7 @@ public class Game extends JPanel implements ActionListener{
                     cek++;
                 }
 
-                if (cekwave[4] == 9) { //5
+                if (cekwave[4] == 9) { //6
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -930,7 +1648,7 @@ public class Game extends JPanel implements ActionListener{
                     cek++;
                 }
 
-                if (cekwave[5] == 10) {//6
+                if (cekwave[5] == 10) {//7
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -940,7 +1658,7 @@ public class Game extends JPanel implements ActionListener{
                     cek++;
                 }
 
-                if (cekwave[6] == 11) { //7
+                if (cekwave[6] == 11) { //8
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -948,9 +1666,10 @@ public class Game extends JPanel implements ActionListener{
                     wave = 8;
                     cekwave[6] = 0;
                     cek++;
+
                 }
 
-                if (cekwave[7] == 12) { //8
+                if (cekwave[7] == 12) { //9
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -960,7 +1679,7 @@ public class Game extends JPanel implements ActionListener{
                     cek++;
                 }
 
-                if (cekwave[8] == 15) { //9
+                if (cekwave[8] == 15) { //10
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -969,9 +1688,180 @@ public class Game extends JPanel implements ActionListener{
                     cekwave[8] = 0;
                     cek++;
                 }
+                if (cekwave[9] == 18) { //11
+                    if (nyawa != 0) {
+                        score = score * nyawa;
+                    }
+                    wave = 11;
+                    cekwave[9] = 0;
+                    cek++;
+                    }
+
+                    if (cekwave[10] == 18) { //12
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 12;
+                        cekwave[10] = 0;
+                        cek++;
+                    }
+                    if (cekwave[11] == 18) { //13
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 13;
+                        cekwave[11] = 0;
+                        cek++;
+                    }
+                    if (cekwave[12] == 18) { //14
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 14;
+                        cekwave[12] = 0;
+                        cek++;
+                    }
+                    if (cekwave[13] == 18) { //15
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 15;
+                        cekwave[13] = 0;
+                        cek++;
+                    }
+                    if (cekwave[14] == 18) { //16
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 16;
+                        cekwave[14] = 0;
+                        cek++;
+                    }
+                    if (cekwave[15] == 18) { //17
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 17;
+                        cekwave[15] = 0;
+                        cek++;
+                    }
+                    if (cekwave[16] == 18) { //18
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 18;
+                        cekwave[16] = 0;
+                        cek++;
+                    }
+                    if (cekwave[17] == 18) { //19
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 19;
+                        cekwave[17] = 0;
+                        cek++;
+                    }
+
+                    if (cekwave[18] == 18) { //20
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 20;
+                        cekwave[18] = 0;
+                        cek++;
+                    }
+
+                    if (cekwave[19] == 18) { //21
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 21;
+                        cekwave[19] = 0;
+                        cek++;
+                    }
+                    if (cekwave[20] == 18) { //22
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 22;
+                        cekwave[20] = 0;
+                        cek++;
+                    }
+                    if (cekwave[21] == 18) { //23
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 23;
+                        cekwave[21] = 0;
+                        cek++;
+                    }
+                    if (cekwave[22] == 18) { //24
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 24;
+                        cekwave[22] = 0;
+                        cek++;
+                    }
+                    if (cekwave[23] == 18) { //25
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 25;
+                        cekwave[23] = 0;
+                        cek++;
+                    }
+                    if (cekwave[24] == 18) { //26
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 26;
+                        cekwave[24] = 0;
+                        cek++;
+                    }
+                    if (cekwave[25] == 18) { //27
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 27;
+                        cekwave[25] = 0;
+                        cek++;
+                    }
+                    if (cekwave[26] == 18) { //28
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 11;
+                        cekwave[9] = 0;
+                        cek++;
+                    }
+                    if (cekwave[27] == 18) { //29
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 29;
+                        cekwave[27] = 0;
+                        cek++;
+                    }
+                    if (cekwave[28] == 18) { //30
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 30;
+                        cekwave[28] = 0;
+                        cek++;
+                    }
+                    if (cekwave[29] == 18) { //31
+                        if (nyawa != 0) {
+                            score = score * nyawa;
+                        }
+                        wave = 31;
+                        cekwave[29] = 0;
+                        cek++;
+                    }
 
 
-                if (TEMBAK == 1) {
+                    if (TEMBAK == 1) {
                     bullet.add(new peluru(xp + 15, yp - 25, 0));
                     TEMBAK = 0;
                     for (peluru i : bullet) {
