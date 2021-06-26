@@ -9,6 +9,7 @@ public interface Path {
     int HEIGHT = 700;
     Dimension frameSize = new Dimension(WIDTH, HEIGHT);
     String mainFont = "res/font/nasalization.ttf";
+    String pixelFont = "res/font/PixelMplus10-Regular.ttf";
     String saveHighscore = "res/highscore.txt";
     String pemisahHighscore = "|";
 

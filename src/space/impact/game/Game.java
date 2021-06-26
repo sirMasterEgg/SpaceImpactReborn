@@ -12,6 +12,7 @@ import java.util.Random;
 
 public class Game extends JPanel implements ActionListener{
     private PlayerInfo pI;
+    private Font pixel = new FontMaker(Path.pixelFont).getFont();
     static final int DELAY = 20;
     ArrayList<peluru> bullet = new ArrayList<>();
     ArrayList<peluruMusuh> bulletM = new ArrayList<>();
@@ -44,7 +45,7 @@ public class Game extends JPanel implements ActionListener{
     JLabel hati2 ;
     JLabel hati3 ;
     JLabel barrier;
-    Font pixelMplus;
+
 
     Timer timer;
     int score =0;
@@ -141,11 +142,7 @@ public class Game extends JPanel implements ActionListener{
                 if (pause == 0) {
                 g.setColor(Color.green);
 
-//                pixelMplus = Font.createFont(Font.TRUETYPE_FONT, new File("PixelMplus10-Regular.ttf"));
-//                GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-//                ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("PixelMplus10-Regular.ttf")));
-
-                g.setFont(new Font("PixelMplus", Font.BOLD, 15));
+                g.setFont(pixel.deriveFont(20.0f));
                 g.drawString(" SCORE  " + score, 20, 18);
                 if (time == 3) {
                     only = 10;
