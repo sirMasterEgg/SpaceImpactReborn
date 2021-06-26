@@ -5,12 +5,13 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.sound.sampled.*;
 import javax.swing.*;
+import javax.swing.Timer;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 public class Game extends JPanel implements ActionListener{
+    private boolean kamikazee=false;
     private PlayerInfo<String> pI;
     private Font pixel = new FontMaker(Path.pixelFont).getFont();
     private Font font = new FontMaker(Path.mainFont).getFont();
@@ -233,13 +234,16 @@ public class Game extends JPanel implements ActionListener{
                 MyFileHandler file = new TextClass();
                 ArrayList<String> save = file.loadBefore(Path.saveHighscore);
                 String temp = "";
+                int scorekamikaze = score/2;
 
-                JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: " + score + "</html>", "You Lose", JOptionPane.INFORMATION_MESSAGE);
+                if (!kamikazee) JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: " + score + "</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
+                else JOptionPane.showMessageDialog(null, "<html>You Have been Kamikaze!<br>Score asli: " + scorekamikaze + "<br>Score kamikaze: "+ score +"</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
                 pI = new PlayerInfo<>(usertemp);
-                System.out.println(pI.getPlayerName());
-                System.out.println(score);
+//                System.out.println(pI.getPlayerName());
+//                System.out.println(score);
                 temp += pI.getPlayerName() + Path.pemisahHighscore + score;
                 save.add(temp);
+                file.sortByScore(save);
                 file.save(Path.saveHighscore, save);
             } else{
 
@@ -2244,6 +2248,12 @@ public class Game extends JPanel implements ActionListener{
                 }
             }
 
+            if (e.getKeyCode() == KeyEvent.VK_K){
+                nyawa = 0;
+                score *= 2;
+                kamikazee = true;
+            }
+
             switch (e.getKeyChar()){
                 case 'w':
                     yp-=15;
@@ -2271,7 +2281,7 @@ public class Game extends JPanel implements ActionListener{
                     }
                     break;
 
-                case 'k':
+                case 'x':
                     cheat=1;
                     break;
 

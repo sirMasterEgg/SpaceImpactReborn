@@ -5,9 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 public abstract class MyFileHandler {
 
@@ -29,8 +27,33 @@ public abstract class MyFileHandler {
         return result;
     }
 
+    public ArrayList<String> sortByScore (ArrayList<String> data){
+        ArrayList<Integer> arr = new ArrayList<>();
+
+        for (int i = 0; i < data.size(); i++) {
+            String a = data.get(i);
+            arr.add(Integer.parseInt(a.substring(a.indexOf(Path.pemisahHighscore)+1)));
+        }
+
+        int n = arr.size();
+        for (int i = 0; i < n-1; i++){
+            for (int j = 0; j < n-i-1; j++){
+                if (arr.get(j) < arr.get(j+1)) {
+                    int temp = arr.get(j);
+                    arr.set(j, arr.get(j+1));
+                    arr.set(j+1,temp);
+
+                    String tempS = data.get(j);
+                    data.set(j, data.get(j+1));
+                    data.set(j+1,tempS);
+                }
+            }
+        }
+
+        return data;
+    }
+
     public void save(String name, ArrayList<String> data){
-        Collections.sort(data, Collections.reverseOrder());
         StringBuilder temp= new StringBuilder();
         for (String a: data){
             temp.append(a).append("\n");

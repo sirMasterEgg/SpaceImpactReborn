@@ -24,6 +24,11 @@ public class TextClass extends MyFileHandler {
     }
 
     @Override
+    public ArrayList<String> sortByScore(ArrayList<String> data) {
+        return super.sortByScore(data);
+    }
+
+    @Override
     public ArrayList<Integer> loadScore(String path, String pemisah) {
         return super.loadScore(path, pemisah);
     }

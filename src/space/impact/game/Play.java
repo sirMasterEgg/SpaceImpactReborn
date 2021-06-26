@@ -34,13 +34,13 @@ public class Play extends JFrame{
     public Play(String usertemp) {
         this.usertemp=usertemp;
         frame2.setContentPane(new inGame(usertemp));
-        frame2.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent we) {
-                int result = JOptionPane.showConfirmDialog(frame2,"Do you want to Exit ?", "Exit Confirmation ", JOptionPane.YES_NO_OPTION);
-                if (result == JOptionPane.YES_OPTION) frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                else frame2.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-            }
-        });
+//        frame2.addWindowListener(new WindowAdapter() {
+//            public void windowClosing(WindowEvent we) {
+//                int result = JOptionPane.showConfirmDialog(frame2,"Do you want to Exit ?", "Exit Confirmation ", JOptionPane.YES_NO_OPTION);
+//                if (result == JOptionPane.YES_OPTION) frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//                else frame2.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+//            }
+//        });
         frame2.pack();
         frame2.setVisible(true);
         setPreferredSize(Path.frameSize);
