@@ -2167,7 +2167,6 @@ public class Game extends JPanel implements ActionListener{
 
             if (e.getKeyCode() == KeyEvent.VK_F){
                 misil -= 1;
-                System.out.println(misil);
                 if (delayp == 1) {
                     delayp = 0;
                     TEMBAK = 2;
