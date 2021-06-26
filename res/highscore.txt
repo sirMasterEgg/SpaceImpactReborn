@@ -1,5 +1,4 @@
 wqe|2
-wdaa|6
 p|4
 p|38
 p|24
@@ -12,12 +11,7 @@ dsaw|22
 dasd|4
 cok|3
 budi|2
-a|22
 a|0
 a|0
 awok|18
-awds|8
-awds|12
 awdas|48
-adsa|22
-ada|12
