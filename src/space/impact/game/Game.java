@@ -65,6 +65,29 @@ public class Game extends JPanel implements ActionListener{
             cekwave[6]=0;
             cekwave[7]=0;
             cekwave[8]=0;
+//            cekwave[9]=0;
+//            cekwave[10]=0;
+//            cekwave[11]=0;
+//            cekwave[12]=0;
+//            cekwave[13]=0;
+//            cekwave[14]=0;
+//            cekwave[15]=0;
+//            cekwave[16]=0;
+//            cekwave[17]=0;
+//            cekwave[18]=0;
+//            cekwave[19]=0;
+//            cekwave[20]=0;
+//            cekwave[21]=0;
+//            cekwave[22]=0;
+//            cekwave[23]=0;
+//            cekwave[24]=0;
+//            cekwave[25]=0;
+//            cekwave[26]=0;
+//            cekwave[27]=0;
+//            cekwave[28]=0;
+//            cekwave[29]=0;
+//            cekwave[30]=0;
+//            cekwave[31]=0;
             bots.add(new Bot(700,100,1,1));
             bots.add(new Bot(700,250,1,1));
             bots.add(new Bot(700,400,1,1));
@@ -193,6 +216,7 @@ public class Game extends JPanel implements ActionListener{
                         delay = 0;
                         wave = 0;
                     }
+
                 }
                 if (wave == 3) {
                     delay++;
@@ -426,11 +450,12 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 11){
                     delay++;
 
+
                     if (delay == 100) {
-                      bos.add(new boss(500,500,1,1));
+                        bos.add(new boss(500,50,1,1));
                         for (boss i : bos) {
                             if (i.getJenisbos() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-1.png")));
                                 i.getSprite().setSize(100, 100);
                                 i.getSprite().setLocation(i.getXbos(), i.getYbos());
                                 this.add(i.getSprite());
@@ -1997,12 +2022,12 @@ public class Game extends JPanel implements ActionListener{
         }
         for (boss i : bos){
             if(atasbawah==0){
-                if(i.getYbos()==600){
+                if(i.getYbos()==200){
                     atasbawah=1;
                 }
             }
             if(atasbawah==1){
-                if(i.getYbos()==0){
+                if(i.getYbos()==-200){
                     atasbawah=0;
                 }
             }
