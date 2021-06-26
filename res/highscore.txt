@@ -14,4 +14,9 @@ budi|2
 a|0
 a|0
 awok|18
+awd|112
+awds|12
+awds|12
 awdas|48
+awdas|22
+awdas|18

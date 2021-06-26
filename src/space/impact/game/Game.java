@@ -49,7 +49,8 @@ public class Game extends JPanel implements ActionListener{
     JLabel hati2 ;
     JLabel hati3 ;
     JLabel barrier;
-
+    JLabel Klabel;
+    JLabel Kpeluru;
 
 
 
@@ -57,7 +58,10 @@ public class Game extends JPanel implements ActionListener{
     int score = 0;
     private String usertemp;
     JFrame j;
+
     Game(String usertemp,JFrame j) {
+        Klabel = new JLabel();
+        Kpeluru = new JLabel();
     this.usertemp=usertemp;
     this.j=j;
         if(Start==0){
@@ -141,6 +145,24 @@ public class Game extends JPanel implements ActionListener{
         kamikazeDesign();
         missileDesign();
 
+        Rectangle rect = new Rectangle(260,0,750,40);
+        Rectangle rect1 = new Rectangle(300,0,750,40);
+        Klabel.setText("<html> <table> \n" + " = "+jumlahbarrier);
+        Klabel.setFont(font.deriveFont(35.0f));
+        Klabel.setForeground(new Color(52, 239, 0));
+        validate();
+        Klabel.setBounds(rect1);
+        Klabel.setVisible(true);
+        this.add(Klabel);
+
+        Rectangle recta = new Rectangle(460,0,750,50);
+        Kpeluru.setText("<html> <table> \n" + " = " + misil);
+        Kpeluru.setFont(pixel.deriveFont(35.0f));
+        Kpeluru.setForeground(new Color(52, 239, 0));
+        Kpeluru.setBounds(recta);
+        Kpeluru.setVisible(true);
+        this.add(Kpeluru);
+
     }
     //untuk design tampilan skill game
     private void kamikazeDesign(){
@@ -155,29 +177,13 @@ public class Game extends JPanel implements ActionListener{
         this.add(Klabel);
     }
     private void missileDesign(){
-        //missile => hotkey(...)
-        Rectangle rect = new Rectangle(460,0,750,50);
-        JLabel Klabel = new JLabel("<html> <table> \n" +
-                " =");
-        Klabel.setFont(pixel.deriveFont(35.0f));
-        Klabel.setForeground(new Color(52, 239, 0));
-        Klabel.setBounds(rect);
-        Klabel.setVisible(true);
-        this.add(Klabel);
+        Kpeluru.setText("<html> <table> \n" + " = " + misil);
     }
+
     private void barrierDesign(){
-        //missile => hotkey(...)
-        Rectangle rect = new Rectangle(260,0,750,40);
-        Rectangle rect1 = new Rectangle(300,0,750,40);
-        JLabel Klabel = new  JLabel();
         Klabel.setText("<html> <table> \n" + " = "+jumlahbarrier);
-        Klabel.setFont(font.deriveFont(35.0f));
-        Klabel.setForeground(new Color(52, 239, 0));
-        validate();
-        Klabel.setBounds(rect1);
-        Klabel.setVisible(true);
-        this.add(Klabel);
     }
+
     void missileDirection(){
         ImageIcon missile = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill2Path, 0.05));
         JLabel logolabel = new JLabel();
@@ -1964,6 +1970,7 @@ public class Game extends JPanel implements ActionListener{
                         cekwave[29] = 0;
                         cek++;
                     }
+                    missileDesign();
 
 
                     if (TEMBAK == 1) {
@@ -1980,7 +1987,7 @@ public class Game extends JPanel implements ActionListener{
                     }
                 }
 
-                if (TEMBAK == 2 && misil > 1) {
+                if (TEMBAK == 2) {
                         bullet.add(new peluru(xp + 15, yp - 35, 0));
                         bullet.add(new peluru(xp + 15, yp - 15, 0));
                         bullet.add(new peluru(xp + 15, yp - -5, 0));
@@ -2228,12 +2235,12 @@ public class Game extends JPanel implements ActionListener{
             if (e.getKeyCode() == KeyEvent.VK_F){
                 if (misil - 1 >= 0){
                     misil -= 1;
-                    System.out.println(misil);
                     if (delayp == 1) {
                         delayp = 0;
                         TEMBAK = 2;
                         shoot = 1;
                 }
+                    missileDesign();
                 }
             }
 
