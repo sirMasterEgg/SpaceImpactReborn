@@ -145,7 +145,7 @@ public class Instruction extends JPanel {
         Rectangle rect = new Rectangle(300,400,800,400);
         JLabel label = new JLabel("<html> <table>\n"+
                 "<tr>\n"+
-                "<td> -For pause you can click (P)\n"
+                "<td> -Press p to pause and resume the game\n"
         );
         label.setFont(font.deriveFont(35.0f));
         label.setForeground(new Color(255,255,255));

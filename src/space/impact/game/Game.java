@@ -421,6 +421,95 @@ public class Game extends JPanel implements ActionListener{
                         wave = 0;
                     }
                 }
+
+                if (wave == 11){
+                    delay++;
+                }
+
+                if (wave == 12){
+                    delay++;
+                }
+
+                if (wave == 13){
+                    delay++;
+                }
+
+                if (wave == 14){
+                    delay++;
+                }
+
+                if (wave == 15){
+                    delay++;
+                }
+
+                if (wave == 16){
+                    delay++;
+                }
+
+                if (wave == 17){
+                    delay++;
+                }
+
+                if (wave == 18){
+                    delay++;
+                }
+
+                if (wave == 19){
+                    delay++;
+                }
+
+                if (wave == 18){
+                    delay++;
+                }
+
+                if (wave == 19){
+                    delay++;
+                }
+
+                if (wave == 20){
+                    delay++;
+                }
+
+                if (wave == 21){
+                    delay++;
+                }
+
+                if (wave == 22){
+                    delay++;
+                }
+
+                if (wave == 23){
+                    delay++;
+                }
+
+                if (wave == 24){
+                    delay++;
+                }
+
+                if (wave == 25){
+                    delay++;
+                }
+
+                if (wave == 26){
+                    delay++;
+                }
+
+                if (wave == 27){
+                    delay++;
+                }
+
+                if (wave == 28){
+                    delay++;
+                }
+
+                if (wave == 29){
+                    delay++;
+                }
+
+                if (wave == 30){
+                    delay++;
+                }
+
                 for (boss i : bos) {
                     if (i.getJenisbos() == 1) {
                         this.remove(i.getSprite());
