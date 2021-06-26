@@ -1,6 +1,7 @@
 p|18
 jiancok|10
 ds|1432
+dsaw|22
 dasd|4
 cok|3
 budi|2

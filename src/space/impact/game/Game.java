@@ -22,6 +22,7 @@ public class Game extends JPanel implements ActionListener{
     int xp=100;
     int yp=100;
     int only=0;
+    int jumlahbarrier=3;
     Random rn = new Random();
     int wave=1;
     int cek=0;
@@ -145,7 +146,7 @@ public class Game extends JPanel implements ActionListener{
                 g.setFont(pixel.deriveFont(20.0f));
                 g.drawString(" SCORE  " + score, 20, 18);
                 if (time == 3) {
-                    only = 10;
+                    only = 0;
                     this.remove(barrier);
                     time = 0;
                 }
@@ -426,31 +427,14 @@ public class Game extends JPanel implements ActionListener{
                     delay++;
 
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
+                      bos.add(new boss(500,500,1,1));
+                        for (boss i : bos) {
+                            if (i.getJenisbos() == 1) {
                                 i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
                                 i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
+                                i.getSprite().setLocation(i.getXbos(), i.getYbos());
                                 this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                                i.setDelaybos(i.getDelaybos() + 1);
                             }
                         }
                         delay = 0;
@@ -1609,6 +1593,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 2;
                     cekwave[0] = 0;
                     cek++;
+                    jumlahbarrier++;
                 }
                 if (cekwave[1] == 7) { //3
                     if (nyawa != 0) {
@@ -1618,6 +1603,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 3;
                     cekwave[1] = 0;
                     cek++;
+                    jumlahbarrier++;
                 }
                 if (cekwave[2] == 8) { //4
                     if (nyawa != 0) {
@@ -1627,6 +1613,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 4;
                     cekwave[2] = 0;
                     cek++;
+                    jumlahbarrier++;
                 }
                 if (cekwave[3] == 8) { //5
                     if (nyawa != 0) {
@@ -1688,7 +1675,7 @@ public class Game extends JPanel implements ActionListener{
                     cekwave[8] = 0;
                     cek++;
                 }
-                if (cekwave[9] == 18) { //11
+                if (cekwave[9] == 1) { //11
                     if (nyawa != 0) {
                         score = score * nyawa;
                     }
@@ -2136,8 +2123,11 @@ public class Game extends JPanel implements ActionListener{
                     yp+=15;
                     break;
                 case 'c':
-                    if(only==0){
-                        only=1;
+                    if(jumlahbarrier>0){
+                        if(only==0){
+                            only=1;
+                        }
+                        jumlahbarrier--;
                     }
                     break;
 
