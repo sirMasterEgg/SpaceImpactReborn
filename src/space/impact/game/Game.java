@@ -21,42 +21,12 @@ public class Game extends JPanel implements ActionListener{
     ArrayList<botlevel2> bot2 = new ArrayList<>();
     ArrayList<Bot> bots = new ArrayList<>();
     ArrayList<boss> bos = new ArrayList<>();
-    int Start=0;
-    int xp=100;
-    int yp=100;
-    int only=0;
-    int jumlahbarrier=3;
-    int onlymisil = 0;
-    int misil = 10;
-    int kamikaze = 1;
+    int Start=0, xp=100, yp=100, only=0, jumlahbarrier=3, onlymisil = 0, misil = 10, kamikaze = 1, wave=1, cek=0, tembakanbot=0, nyawa=3, delay=0, delayp=0, delaypeluru=0;
     Random rn = new Random();
-    int wave=1;
-    int cek=0;
-    int tembakanbot=0;
-    int nyawa=3;
-    int delay=0;
-    int delayp=0;
-    int delaypeluru=0;
     int []cekwave=new int [99];
     boolean running = false;
-    int TEMBAK=0;
-    int atasbawah=0;
-    int shoot=0;
-    int cheat=0;
-    int time=0;
-    int tx = 0;
-    int pause=0;
-    JLabel Background ;
-    JLabel pesawat ;
-    JLabel hati1 ;
-    JLabel hati2 ;
-    JLabel hati3 ;
-    JLabel barrier;
-    JLabel Klabel;
-    JLabel Kpeluru;
-    JLabel Kkaze;
-
-
+    int TEMBAK=0, atasbawah=0, shoot=0, cheat=0, time=0, tx = 0, pause=0;
+    JLabel Background, pesawat, hati1, hati2, hati3, barrier, Klabel, Kpeluru, Kkaze;
 
     Timer timer;
     int score = 0;
@@ -64,11 +34,17 @@ public class Game extends JPanel implements ActionListener{
     JFrame j;
 
     Game(String usertemp,JFrame j) {
+
+        // music
+        Path.gameMusic.playMusic(Path.gameMusicPath);
+        Path.gameMusic.musicLoop();
+        Path.gameMusic.setVolume(0.15f);
+
         Klabel = new JLabel();
         Kpeluru = new JLabel();
         Kkaze = new JLabel();
-    this.usertemp=usertemp;
-    this.j=j;
+        this.usertemp=usertemp;
+        this.j=j;
         if(Start==0){
             cekwave[0]=0;
             cekwave[1]=0;
@@ -239,8 +215,14 @@ public class Game extends JPanel implements ActionListener{
                 String temp = "";
                 int scorekamikaze = score/2;
 
-                if (!kamikazee) JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: " + score + "</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
-                else JOptionPane.showMessageDialog(null, "<html>You Have been Kamikaze!<br>Score asli: " + scorekamikaze + "<br>Score kamikaze: "+ score +"</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
+                if (!kamikazee) {
+                    Path.gameMusic.stopMusic();
+                    JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: " + score + "</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
+                }
+                else{
+                    Path.gameMusic.stopMusic();
+                    JOptionPane.showMessageDialog(null, "<html>You Have been Kamikaze!<br>Score asli: " + scorekamikaze + "<br>Score kamikaze: "+ score +"</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
+                }
                 pI = new PlayerInfo<>(usertemp);
 //                System.out.println(pI.getPlayerName());
 //                System.out.println(score);
@@ -536,16 +518,48 @@ public class Game extends JPanel implements ActionListener{
                 }
 
                 if (wave == 11){
+                    //delay++;
+                    //if (delay == 100) {
+                    //    bos.add(new boss(500,50,1,1));
+                    //    for (boss i : bos) {
+                    //        if (i.getJenisbos() == 1) {
+                    //            i.setSprite(new JLabel(new ImageIcon("res/foto/boss1.png")));
+                    //            i.getSprite().setSize(100, 100);
+                    //            i.getSprite().setLocation(i.getXbos(), i.getYbos());
+                    //            this.add(i.getSprite());
+                    //            i.setDelaybos(i.getDelaybos() + 1);
+                    //        }
+                    //    }
+                    //    delay = 0;
+                    //    wave = 0;
+                    //}
                     delay++;
                     if (delay == 100) {
-                        bos.add(new boss(500,50,1,1));
-                        for (boss i : bos) {
-                            if (i.getJenisbos() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/boss1.png")));
+                        bots.add(new Bot(700, 50, 1, 1));
+                        bots.add(new Bot(850, 50, 1, 1));
+                        bots.add(new Bot(700, 200, 1, 1));
+                        bots.add(new Bot(850, 200, 1, 1));
+                        bots.add(new Bot(700, 350, 1, 1));
+                        bots.add(new Bot(850, 350, 1, 1));
+                        bots.add(new Bot(700, 500, 1, 1));
+                        bots.add(new Bot(850, 500, 1, 1));
+                        bots.add(new Bot(550, 50, 1, 1));
+                        bots.add(new Bot(550, 200, 1, 1));
+                        bots.add(new Bot(550, 350, 1, 1));
+                        bots.add(new Bot(550, 500, 1, 1));
+                        bots.add(new Bot(450, 130, 1, 1));
+                        bots.add(new Bot(450, 280, 1, 1));
+                        bots.add(new Bot(450, 430, 1, 1));
+                        bots.add(new Bot(350, 200, 1, 1));
+                        bots.add(new Bot(350, 350, 1, 1));
+                        bots.add(new Bot(250, 280, 1, 1));
+                        for (Bot i : bots) {
+                            if (i.getJenisbot() == 1) {
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
                                 i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbos(), i.getYbos());
+                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
                                 this.add(i.getSprite());
-                                i.setDelaybos(i.getDelaybos() + 1);
+                                i.setDelaybot(i.getDelaybot() + 1);
                             }
                         }
                         delay = 0;
@@ -556,31 +570,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 12){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -591,31 +605,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 13){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -626,31 +640,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 14){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -661,31 +675,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 15){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -697,31 +711,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 16){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -732,31 +746,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 17){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -767,31 +781,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 18){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -802,31 +816,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 19){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -837,31 +851,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 18){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -872,31 +886,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 19){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -907,31 +921,31 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 20){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(700, 50, 1, 1));
-                        bots.add(new Bot(850, 50, 1, 1));
-                        bots.add(new Bot(700, 200, 1, 1));
-                        bots.add(new Bot(850, 200, 1, 1));
-                        bots.add(new Bot(700, 350, 1, 1));
-                        bots.add(new Bot(850, 350, 1, 1));
-                        bots.add(new Bot(700, 500, 1, 1));
-                        bots.add(new Bot(850, 500, 1, 1));
-                        bots.add(new Bot(550, 50, 1, 1));
-                        bots.add(new Bot(550, 200, 1, 1));
-                        bots.add(new Bot(550, 350, 1, 1));
-                        bots.add(new Bot(550, 500, 1, 1));
-                        bots.add(new Bot(450, 130, 1, 1));
-                        bots.add(new Bot(450, 280, 1, 1));
-                        bots.add(new Bot(450, 430, 1, 1));
-                        bots.add(new Bot(350, 200, 1, 1));
-                        bots.add(new Bot(350, 350, 1, 1));
-                        bots.add(new Bot(250, 280, 1, 1));
-                        for (Bot i : bots) {
-                            if (i.getJenisbot() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
-                                i.getSprite().setSize(100, 100);
-                                i.getSprite().setLocation(i.getXbot(), i.getYbot());
-                                this.add(i.getSprite());
-                                i.setDelaybot(i.getDelaybot() + 1);
+                        bot2.add(new botlevel2(700, 50, 1, 1));
+                        bot2.add(new botlevel2(850, 50, 1, 1));
+                        bot2.add(new botlevel2(700, 200, 1, 1));
+                        bot2.add(new botlevel2(850, 200, 1, 1));
+                        bot2.add(new botlevel2(700, 350, 1, 1));
+                        bot2.add(new botlevel2(850, 350, 1, 1));
+                        bot2.add(new botlevel2(700, 500, 1, 1));
+                        bot2.add(new botlevel2(850, 500, 1, 1));
+                        bot2.add(new botlevel2(550, 50, 1, 1));
+                        bot2.add(new botlevel2(550, 200, 1, 1));
+                        bot2.add(new botlevel2(550, 350, 1, 1));
+                        bot2.add(new botlevel2(550, 500, 1, 1));
+                        bot2.add(new botlevel2(450, 130, 1, 1));
+                        bot2.add(new botlevel2(450, 280, 1, 1));
+                        bot2.add(new botlevel2(450, 430, 1, 1));
+                        bot2.add(new botlevel2(350, 200, 1, 1));
+                        bot2.add(new botlevel2(350, 350, 1, 1));
+                        bot2.add(new botlevel2(250, 280, 1, 1));
+                        for (botlevel2 j : bot2) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                                j.getSprite().setSize(100, 100);
+                                j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                                this.add(j.getSprite());
+                                j.setDelaybot2(j.getDelaybot2() + 1);
                             }
                         }
                         delay = 0;
@@ -1553,6 +1567,26 @@ public class Game extends JPanel implements ActionListener{
                             j.setDelaybot2(j.getDelaybot2() + 1);
                         }
 
+                        if (j.getDelaybot2() == 5) {
+                            if (j.getJenisbot2() == 1) {
+                                j.setJenisbot2(2);
+                            } else if (j.getJenisbot2() == 2) {
+                                j.setJenisbot2(3);
+                            } else if (j.getJenisbot2() == 3) {
+                                j.setJenisbot2(4);
+                            } else if (j.getJenisbot2() == 4) {
+                                j.setJenisbot2(5);
+                            } else if (j.getJenisbot2() == 5) {
+                                j.setJenisbot2(6);
+                            } else if (j.getJenisbot2() == 6) {
+                                j.setJenisbot2(7);
+                            } else if (j.getJenisbot2() == 7) {
+                                j.setJenisbot2(8);
+                            } else if (j.getJenisbot2() == 8) {
+                                j.setJenisbot2(1);
+                            }
+                            j.setDelaybot2(1);
+                        }
 
                     }
 
@@ -1872,7 +1906,7 @@ public class Game extends JPanel implements ActionListener{
                             }
                         }
                 }
-                //anjing
+
 
                 for (Bot i : bots) {
 

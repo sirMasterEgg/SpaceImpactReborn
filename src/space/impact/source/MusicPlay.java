@@ -37,6 +37,7 @@ public class MusicPlay {
 	public void stopMusic() {
 			clip.stop();
 	}
+
 	public void startMusicFromStop() {
 			clip.start();
 	}
