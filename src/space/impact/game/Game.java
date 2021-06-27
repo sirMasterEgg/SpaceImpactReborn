@@ -520,9 +520,9 @@ public class Game extends JPanel implements ActionListener{
                     if (wave == 11) {
                         delay++;
                         if (delay == 100) {
-                            bots.add(new Bot(700,100,1,1,0));
-                            bots.add(new Bot(700,250,1,1,0));
-                            bots.add(new Bot(700,400,1,1,0));
+                            bots.add(new Bot(700,100,1,1,1));
+                            bots.add(new Bot(700,250,1,1,1));
+                            bots.add(new Bot(700,400,1,1,1));
                             for (Bot i : bots) {
                                 if (i.getJenisbot() == 1) {
                                     i.setSprite(new JLabel(new ImageIcon("res/foto/1.png")));
@@ -540,12 +540,20 @@ public class Game extends JPanel implements ActionListener{
                 if (wave == 12){
                     delay++;
                     if (delay == 100) {
-                        bots.add(new Bot(850, 50, 1, 1 ,1));
+//                        bots.add(new Bot(850, 50, 1, 1 ,1));
+//                        bots.add(new Bot(700, 250, 1, 1,1));
+//                        bots.add(new Bot(850, 200, 1, 1,1));
+//                        bots.add(new Bot(700, 400, 1, 1,1));
+//                        bots.add(new Bot(850, 350, 1, 1,1));
+//                        bots.add(new Bot(850, 500, 1, 1,1));
+//                        bots.add(new Bot(850, 500, 1, 1,1));
+
+                        bots.add(new Bot(700, 100, 1, 1,1));
+                        bots.add(new Bot(850, 50, 1, 1,1));
                         bots.add(new Bot(700, 250, 1, 1,1));
                         bots.add(new Bot(850, 200, 1, 1,1));
                         bots.add(new Bot(700, 400, 1, 1,1));
                         bots.add(new Bot(850, 350, 1, 1,1));
-                        bots.add(new Bot(850, 500, 1, 1,1));
                         bots.add(new Bot(850, 500, 1, 1,1));
                         for (Bot i : bots) {
                             if (i.getJenisbot() == 1) {
@@ -1040,6 +1048,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 5;
                     cekwave[3] = 0;
                     cek++;
+                    jumlahbarrier++;
                 }
 
                 if (cekwave[4] == 9) { //6
@@ -1050,6 +1059,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 6;
                     cekwave[4] = 0;
                     cek++;
+                    jumlahbarrier++;
                 }
 
                 if (cekwave[5] == 10) {//7
@@ -1060,6 +1070,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 7;
                     cekwave[5] = 0;
                     cek++;
+                    jumlahbarrier++;
                 }
 
                 if (cekwave[6] == 11) { //8
@@ -1070,6 +1081,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 8;
                     cekwave[6] = 0;
                     cek++;
+                    jumlahbarrier++;
 
                 }
 
@@ -1081,6 +1093,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 9;
                     cekwave[7] = 0;
                     cek++;
+                    jumlahbarrier++;
                 }
 
                 if (cekwave[8] == 15) { //10
@@ -1091,6 +1104,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 10;
                     cekwave[8] = 0;
                     cek++;
+                    jumlahbarrier++;
                 }
                 if (cekwave[9] == 18) { //11
                     if (nyawa != 0) {
@@ -1100,6 +1114,7 @@ public class Game extends JPanel implements ActionListener{
                     wave = 11;
                     cekwave[9] = 0;
                     cek++;
+                    jumlahbarrier++;
                     }
 //////////////////////////////////////////////////////
                     if (cekwave[10] == 3) { //11 ke 12
@@ -1110,6 +1125,7 @@ public class Game extends JPanel implements ActionListener{
                         wave = 12;
                         cekwave[10] = 0;
                         cek++;
+                        jumlahbarrier++;
                     }
                     if (cekwave[11] == 7) { //12 ke 13
                         if (nyawa != 0) {
@@ -1119,6 +1135,7 @@ public class Game extends JPanel implements ActionListener{
                         wave = 13;
                         cekwave[11] = 0;
                         cek++;
+                        jumlahbarrier++;
                     }
                     if (cekwave[12] == 8) { //14
                         if (nyawa != 0) {
@@ -1128,6 +1145,7 @@ public class Game extends JPanel implements ActionListener{
                         wave = 14;
                         cekwave[12] = 0;
                         cek++;
+                        jumlahbarrier++;
                     }
                     if (cekwave[13] == 8) { //15
                         if (nyawa != 0) {
@@ -1137,6 +1155,7 @@ public class Game extends JPanel implements ActionListener{
                         wave = 15;
                         cekwave[13] = 0;
                         cek++;
+                        jumlahbarrier++;
                     }
                     if (cekwave[14] == 9) { //16
                         if (nyawa != 0) {
@@ -1146,6 +1165,7 @@ public class Game extends JPanel implements ActionListener{
                         wave = 16;
                         cekwave[14] = 0;
                         cek++;
+                        jumlahbarrier++;
                     }
                     if (cekwave[15] == 10) { //17
                         if (nyawa != 0) {
@@ -1155,6 +1175,7 @@ public class Game extends JPanel implements ActionListener{
                         wave = 17;
                         cekwave[15] = 0;
                         cek++;
+                        jumlahbarrier++;
                     }
                     if (cekwave[16] == 11) { //18
                         if (nyawa != 0) {
@@ -1164,6 +1185,7 @@ public class Game extends JPanel implements ActionListener{
                         wave = 18;
                         cekwave[16] = 0;
                         cek++;
+                        jumlahbarrier++;
                     }
                     if (cekwave[17] == 12) { //19
                         if (nyawa != 0) {
@@ -1173,6 +1195,7 @@ public class Game extends JPanel implements ActionListener{
                         wave = 19;
                         cekwave[17] = 0;
                         cek++;
+                        jumlahbarrier++;
                     }
 
                     if (cekwave[18] == 15) { //20
@@ -1183,6 +1206,7 @@ public class Game extends JPanel implements ActionListener{
                         wave = 20;
                         cekwave[18] = 0;
                         cek++;
+                        jumlahbarrier++;
                     }
                     missileDesign();
 
