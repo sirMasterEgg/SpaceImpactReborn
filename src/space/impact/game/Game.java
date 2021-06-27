@@ -162,7 +162,13 @@ public class Game extends JPanel implements ActionListener{
     private void barrierDesign(){
         Klabel.setText("<html> <table> \n" + " = "+jumlahbarrier);
     }
-
+    private void pausePic(){
+        ImageIcon pause = new ImageIcon(ImageClass.scaleImage(Path.pausePath, 0.5));
+        JLabel logolabel = new JLabel();
+        logolabel.setIcon(pause);
+        logolabel.setHorizontalAlignment(JLabel.LEADING);
+        this.add(logolabel);
+    }
     void missileDirection(){
         ImageIcon missile = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill2Path, 0.05));
         JLabel logolabel = new JLabel();
@@ -1500,6 +1506,7 @@ public class Game extends JPanel implements ActionListener{
                         pause=1;
                     }else if(pause==1){
                         pause=0;
+                        pausePic();
                     }
                     break;
 

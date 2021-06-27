@@ -29,6 +29,7 @@ public interface Path {
     String instructionSkill2Path = "res/foto/launcher.png";
     String instructionSkill3Path = "res/foto/Barrier.png";
     String InstructionPausePath = "res/foto/Pause.png";
+    String pausePath = "res/foto/pausedGame.png";
 
     // level selector
 //    String levelLabel = "LEVELS";
