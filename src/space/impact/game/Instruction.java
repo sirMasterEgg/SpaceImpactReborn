@@ -34,11 +34,13 @@ public class Instruction extends JPanel {
         kamikazeDirection();
         missileDirection();
         invisibelDirection();
+        pauseDirection();
         backButton();
         kamikaze();
         Mlaucher();
         Invisibel();
         pauseMenu();
+
     }
     private void drawDirection() {
         ImageIcon logo = new ImageIcon(ImageClass.scaleImage(Path.instructionArrowPath,0.4));
@@ -75,7 +77,14 @@ public class Instruction extends JPanel {
         logolabel.setBounds(120, 440, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logolabel);
     }
-
+    private void pauseDirection(){
+        ImageIcon p = new ImageIcon(ImageClass.scaleImage(Path.InstructionPausePath, 0.8));
+        JLabel logolabel = new JLabel();
+        logolabel.setIcon(p);
+        logolabel.setHorizontalAlignment(JLabel.LEADING);
+        logolabel.setBounds(125, 550, ImageClass.imgWidth(), ImageClass.imgHeight());
+        this.add(logolabel);
+    }
     private void drawTextDirection() {
         Rectangle rect = new Rectangle(300,85,500,100);
         JLabel label = new JLabel("<html> <table>\n" +
