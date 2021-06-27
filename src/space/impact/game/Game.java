@@ -18,6 +18,7 @@ public class Game extends JPanel implements ActionListener{
     static final int DELAY = 20;
     ArrayList<peluru> bullet = new ArrayList<>();
     ArrayList<peluruMusuh> bulletM = new ArrayList<>();
+    ArrayList<botlevel2> bot2 = new ArrayList<>();
     ArrayList<Bot> bots = new ArrayList<>();
     ArrayList<boss> bos = new ArrayList<>();
     int Start=0;
@@ -1471,6 +1472,7 @@ public class Game extends JPanel implements ActionListener{
                         this.add(i.getSprite());
                         i.setDelaybot(i.getDelaybot() + 1);
                     }
+
                     if (i.getDelaybot() == 5) {
                         if (i.getJenisbot() == 1) {
                             i.setJenisbot(2);
@@ -1491,6 +1493,69 @@ public class Game extends JPanel implements ActionListener{
                         }
                         i.setDelaybot(1);
                     }
+
+                    for (botlevel2 j : bot2){
+                        if (j.getJenisbot2() == 1) {
+                            this.remove(j.getSprite());
+                            j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-1-removebg-preview.png")));
+                            j.getSprite().setSize(100, 100);
+                            j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                            this.add(j.getSprite());
+                            j.setDelaybot2(j.getDelaybot2() + 1);
+                        } else if (j.getJenisbot2() == 2) {
+                            this.remove(j.getSprite());
+                            j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-2-removebg-preview.png")));
+                            j.getSprite().setSize(100, 100);
+                            j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                            this.add(j.getSprite());
+                            j.setDelaybot2(j.getDelaybot2() + 1);
+                        } else if (j.getJenisbot2() == 3) {
+                            this.remove(j.getSprite());
+                            j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-3-removebg-preview.png")));
+                            j.getSprite().setSize(100, 100);
+                            j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                            this.add(j.getSprite());
+                            j.setDelaybot2(j.getDelaybot2() + 1);
+                        } else if (j.getJenisbot2() == 4) {
+                            this.remove(j.getSprite());
+                            j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-4-removebg-preview.png")));
+                            j.getSprite().setSize(100, 100);
+                            j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                            this.add(j.getSprite());
+                            j.setDelaybot2(j.getDelaybot2() + 1);
+                        } else if (j.getJenisbot2() == 5) {
+                            this.remove(j.getSprite());
+                            j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-5-removebg-preview.png")));
+                            j.getSprite().setSize(100, 100);
+                            j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                            this.add(j.getSprite());
+                            j.setDelaybot2(j.getDelaybot2() + 1);
+                        } else if (j.getJenisbot2() == 6) {
+                            this.remove(j.getSprite());
+                            j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-6-removebg-preview.png")));
+                            j.getSprite().setSize(100, 100);
+                            j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                            this.add(j.getSprite());
+                            j.setDelaybot2(j.getDelaybot2() + 1);
+                        } else if (j.getJenisbot2() == 7) {
+                            this.remove(j.getSprite());
+                            j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-7-removebg-preview.png")));
+                            j.getSprite().setSize(100, 100);
+                            j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                            this.add(j.getSprite());
+                            j.setDelaybot2(j.getDelaybot2() + 1);
+                        } else if (j.getJenisbot2() == 8) {
+                            this.remove(j.getSprite());
+                            j.setSprite(new JLabel(new ImageIcon("res/foto/botlevel2-8-removebg-preview.png")));
+                            j.getSprite().setSize(100, 100);
+                            j.getSprite().setLocation(j.getXbot2(), j.getYbot2());
+                            this.add(j.getSprite());
+                            j.setDelaybot2(j.getDelaybot2() + 1);
+                        }
+
+
+                    }
+
                 }
                 if (cekwave[0] == 3) { //2
                     if (nyawa != 0) {
