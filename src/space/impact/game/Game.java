@@ -21,42 +21,12 @@ public class Game extends JPanel implements ActionListener{
     ArrayList<botlevel2> bot2 = new ArrayList<>();
     ArrayList<Bot> bots = new ArrayList<>();
     ArrayList<boss> bos = new ArrayList<>();
-    int Start=0;
-    int xp=100;
-    int yp=100;
-    int only=0;
-    int jumlahbarrier=3;
-    int onlymisil = 0;
-    int misil = 10;
-    int kamikaze = 1;
+    int Start=0, xp=100, yp=100, only=0, jumlahbarrier=3, onlymisil = 0, misil = 10, kamikaze = 1, wave=1, cek=0, tembakanbot=0, nyawa=3, delay=0, delayp=0, delaypeluru=0;
     Random rn = new Random();
-    int wave=1;
-    int cek=0;
-    int tembakanbot=0;
-    int nyawa=3;
-    int delay=0;
-    int delayp=0;
-    int delaypeluru=0;
     int []cekwave=new int [99];
     boolean running = false;
-    int TEMBAK=0;
-    int atasbawah=0;
-    int shoot=0;
-    int cheat=0;
-    int time=0;
-    int tx = 0;
-    int pause=0;
-    JLabel Background ;
-    JLabel pesawat ;
-    JLabel hati1 ;
-    JLabel hati2 ;
-    JLabel hati3 ;
-    JLabel barrier;
-    JLabel Klabel;
-    JLabel Kpeluru;
-    JLabel Kkaze;
-
-
+    int TEMBAK=0, atasbawah=0, shoot=0, cheat=0, time=0, tx = 0, pause=0;
+    JLabel Background, pesawat, hati1, hati2, hati3, barrier, Klabel, Kpeluru, Kkaze;
 
     Timer timer;
     int score = 0;
@@ -73,8 +43,8 @@ public class Game extends JPanel implements ActionListener{
         Klabel = new JLabel();
         Kpeluru = new JLabel();
         Kkaze = new JLabel();
-    this.usertemp=usertemp;
-    this.j=j;
+        this.usertemp=usertemp;
+        this.j=j;
         if(Start==0){
             cekwave[0]=0;
             cekwave[1]=0;

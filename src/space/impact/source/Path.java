@@ -13,12 +13,6 @@ public interface Path {
     String saveHighscore = "res/highscore.txt";
     String pemisahHighscore = "|";
 
-    // button sfx
-//    String forwardClick = "res/sound/click_forward.wav";
-//    MusicPlay clickForward = new MusicPlay();
-//    String backwardClick = "res/sound/click_backward.wav";
-//    MusicPlay clickBackward = new MusicPlay();
-
     // main menu
     String bgMainMenu="res/foto/bg.jpg";
     String mainMenuPath = "res/foto/judul.png";
@@ -30,17 +24,11 @@ public interface Path {
 //    final int paddleWidth = 100, paddleHeight = 25;
 
     // instruction mode
-    String instructionBgPath = "res/foto/bg_zen.jpg";
     String instructionArrowPath = "res/foto/arrow.png";
     String instructionSkill1Path = "res/foto/dead.png";
     String instructionSkill2Path = "res/foto/launcher.png";
     String instructionSkill3Path = "res/foto/Barrier.png";
     String InstructionPausePath = "res/foto/Pause.png";
-    String instructionMusicPath = "res/sound/ZenMode.wav";
-    String instructionBack = "Back";
-    String scoreBackground = "res/foto/glowLightning.png";
-    String gamepaused = "res/foto/bos3.png";
-    MusicPlay instructionMusic = new MusicPlay();
 
     // level selector
 //    String levelLabel = "LEVELS";
@@ -52,13 +40,4 @@ public interface Path {
     MusicPlay gameMusic = new MusicPlay();
     String gameMusicPath = "res/sound/NintendoRevolution.wav";
 
-    // credits
-//    String creditsText = "<html><center>BRIX<br>"
-//            + "by JKDev:<br>"
-//            + "PBO - H<br>"
-//            + "Jason - 05111940000085<br>"
-//            + "Kevin - 05111940000157<br>"
-//            + "thanks for playing</center>";
-//    MusicPlay creditsMusic = new MusicPlay();
-//    String creditsMusicPath = "res/sound/CreditMusic.wav";
 }
