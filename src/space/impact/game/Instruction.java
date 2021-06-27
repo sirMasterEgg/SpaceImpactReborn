@@ -173,6 +173,7 @@ public class Instruction extends JPanel {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Path.mainMenuMusic.stopMusic();
                 Play.frame2.setContentPane(new inGame(usertemp));
                 Play.frame2.pack();
             }

@@ -61,6 +61,12 @@ public class Game extends JPanel implements ActionListener{
     JFrame j;
 
     Game(String usertemp,JFrame j) {
+
+        // music
+        Path.gameMusic.playMusic(Path.gameMusicPath);
+        Path.gameMusic.musicLoop();
+        Path.gameMusic.setVolume(0.15f);
+
         Klabel = new JLabel();
         Kpeluru = new JLabel();
     this.usertemp=usertemp;
@@ -236,8 +242,14 @@ public class Game extends JPanel implements ActionListener{
                 String temp = "";
                 int scorekamikaze = score/2;
 
-                if (!kamikazee) JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: " + score + "</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
-                else JOptionPane.showMessageDialog(null, "<html>You Have been Kamikaze!<br>Score asli: " + scorekamikaze + "<br>Score kamikaze: "+ score +"</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
+                if (!kamikazee) {
+                    Path.gameMusic.stopMusic();
+                    JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: " + score + "</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
+                }
+                else{
+                    Path.gameMusic.stopMusic();
+                    JOptionPane.showMessageDialog(null, "<html>You Have been Kamikaze!<br>Score asli: " + scorekamikaze + "<br>Score kamikaze: "+ score +"</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
+                }
                 pI = new PlayerInfo<>(usertemp);
 //                System.out.println(pI.getPlayerName());
 //                System.out.println(score);
