@@ -205,17 +205,19 @@ public class Game extends JPanel implements ActionListener{
                 String temp = "";
                 int scorekamikaze = score/2;
 
-                if (!kamikazee && !menang) {
-                    Path.gameMusic.stopMusic();
-                    JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: " + score + "</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
-                }
-                else if (kamikazee && !menang) {
-                    Path.gameMusic.stopMusic();
-                    JOptionPane.showMessageDialog(null, "<html>You Have been Kamikaze!<br>Score asli: " + scorekamikaze + "<br>Score kamikaze: "+ score +"</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
+                if (!kamikazee) {
+                    if (menang){
+                        Path.gameMusic.stopMusic();
+                        JOptionPane.showMessageDialog(null, "<html>You Win!<br>Score: " + score + "</html>", "You Win! Congrats!!!!", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    else{
+                        Path.gameMusic.stopMusic();
+                        JOptionPane.showMessageDialog(null, "<html>You Lose!<br>Score: " + score + "</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
+                    }
                 }
                 else {
                     Path.gameMusic.stopMusic();
-                    JOptionPane.showMessageDialog(null, "<html>You Win!<br>Score: " + score + "</html>", "You Win! Congrats!!!!", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "<html>You Have been Kamikaze!<br>Score asli: " + scorekamikaze + "<br>Score kamikaze: "+ score +"</html>", "You Lose!", JOptionPane.INFORMATION_MESSAGE);
                 }
                 pI = new PlayerInfo<>(usertemp);
 //                System.out.println(pI.getPlayerName());
