@@ -35,6 +35,7 @@ public interface Path {
     String instructionSkill1Path = "res/foto/dead.png";
     String instructionSkill2Path = "res/foto/launcher.png";
     String instructionSkill3Path = "res/foto/Barrier.png";
+    String InstructionPausePath = "res/foto/Pause.png";
     String instructionMusicPath = "res/sound/ZenMode.wav";
     String instructionBack = "Back";
     String scoreBackground = "res/foto/glowLightning.png";
