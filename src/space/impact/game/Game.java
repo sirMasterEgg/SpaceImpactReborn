@@ -540,7 +540,7 @@ public class Game extends JPanel implements ActionListener{
                         bos.add(new boss(500,50,1,1));
                         for (boss i : bos) {
                             if (i.getJenisbos() == 1) {
-                                i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-1.png")));
+                                i.setSprite(new JLabel(new ImageIcon("res/foto/boss1.png")));
                                 i.getSprite().setSize(100, 100);
                                 i.getSprite().setLocation(i.getXbos(), i.getYbos());
                                 this.add(i.getSprite());
