@@ -1329,259 +1329,56 @@ public class Game extends JPanel implements ActionListener{
                 for (boss i : bos) {
                     if (i.getJenisbos() == 1) {
                         this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-1.png")));
+                        i.setSprite(new JLabel(new ImageIcon("res/foto/boss1.png")));
                         i.getSprite().setSize(640, 640);
                         i.getSprite().setLocation(i.getXbos(), i.getYbos());
                         this.add(i.getSprite());
                         i.setDelaybos(i.getDelaybos() + 1);
                     } else if (i.getJenisbos() == 2) {
                         this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-2.png")));
+                        i.setSprite(new JLabel(new ImageIcon("res/foto/boss2.png")));
                         i.getSprite().setSize(640, 640);
                         i.getSprite().setLocation(i.getXbos(), i.getYbos());
                         this.add(i.getSprite());
                         i.setDelaybos(i.getDelaybos() + 1);
                     } else if (i.getJenisbos() == 3) {
                         this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-3.png")));
+                        i.setSprite(new JLabel(new ImageIcon("res/foto/boss3.png")));
                         i.getSprite().setSize(640, 640);
                         i.getSprite().setLocation(i.getXbos(), i.getYbos());
                         this.add(i.getSprite());
                         i.setDelaybos(i.getDelaybos() + 1);
                     } else if (i.getJenisbos() == 4) {
                         this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-4.png")));
+                        i.setSprite(new JLabel(new ImageIcon("res/foto/boss4.png")));
                         i.getSprite().setSize(640, 640);
                         i.getSprite().setLocation(i.getXbos(), i.getYbos());
                         this.add(i.getSprite());
                         i.setDelaybos(i.getDelaybos() + 1);
                     } else if (i.getJenisbos() == 5) {
                         this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-5.png")));
+                        i.setSprite(new JLabel(new ImageIcon("res/foto/boss5.png")));
                         i.getSprite().setSize(640, 640);
                         i.getSprite().setLocation(i.getXbos(), i.getYbos());
                         this.add(i.getSprite());
                         i.setDelaybos(i.getDelaybos() + 1);
                     } else if (i.getJenisbos() == 6) {
                         this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-6.png")));
+                        i.setSprite(new JLabel(new ImageIcon("res/foto/boss6.png")));
                         i.getSprite().setSize(640, 640);
                         i.getSprite().setLocation(i.getXbos(), i.getYbos());
                         this.add(i.getSprite());
                         i.setDelaybos(i.getDelaybos() + 1);
                     } else if (i.getJenisbos() == 7) {
                         this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-7.png")));
+                        i.setSprite(new JLabel(new ImageIcon("res/foto/boss7.png")));
                         i.getSprite().setSize(640, 640);
                         i.getSprite().setLocation(i.getXbos(), i.getYbos());
                         this.add(i.getSprite());
                         i.setDelaybos(i.getDelaybos() + 1);
                     } else if (i.getJenisbos() == 8) {
                         this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-8.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 9) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-9.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 10) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-10.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 11) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-11.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 12) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-12.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 13) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-13.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 14) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-14.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 15) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-15.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 16) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-16.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 17) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-17.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 18) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-18.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 19) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-19.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 20) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-20.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 21) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-21.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 22) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-22.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 23) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-23.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 24) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-24.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 25) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-25.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 26) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-26.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 27) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-27.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 28) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-28.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 29) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-29.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 30) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-30.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 31) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-31.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 32) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-32.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 33) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-33.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 34) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-34.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 35) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-35.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 36) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-36.png")));
-                        i.getSprite().setSize(640, 640);
-                        i.getSprite().setLocation(i.getXbos(), i.getYbos());
-                        this.add(i.getSprite());
-                        i.setDelaybos(i.getDelaybos() + 1);
-                    } else if (i.getJenisbos() == 37) {
-                        this.remove(i.getSprite());
-                        i.setSprite(new JLabel(new ImageIcon("res/foto/PcHM-37.png")));
+                        i.setSprite(new JLabel(new ImageIcon("res/foto/boss8.pngww")));
                         i.getSprite().setSize(640, 640);
                         i.getSprite().setLocation(i.getXbos(), i.getYbos());
                         this.add(i.getSprite());
