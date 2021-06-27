@@ -48,16 +48,9 @@ public interface Path {
 //    String lvselMusicPath = "res/sound/LevelSelectMusic.wav";
 //    MusicPlay lvselMusic = new MusicPlay();
 
-    // normal mode
-//    final int timeLimit = 100;
-//    String normalButton = "NORMAL";
-//    String normalBGPath = "res/image/bg_level.jpg";
-//    MusicPlay normalMusic = new MusicPlay();
-//    String normalMusicPath = "res/sound/NormalMode.wav";
-//    String finalText = "<html><center>Congratulations!<br>"
-//            + "You have finished the game!";
-//    MusicPlay brickBreak = new MusicPlay();
-//    String brickBreakPath = "res/sound/brick-break.wav";
+    // game mode
+    MusicPlay gameMusic = new MusicPlay();
+    String gameMusicPath = "res/sound/NintendoRevolution.wav";
 
     // credits
 //    String creditsText = "<html><center>BRIX<br>"

@@ -53,7 +53,7 @@ public class inGame extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Music change
-//                Path.titleMusic.stopMusic();
+                Path.mainMenuMusic.stopMusic();
 //                Path.clickForward.playMusic(Commons.forwardClick);
                 //Changing panel and start the game
 //                Play.frame2.setContentPane();
@@ -79,7 +79,7 @@ public class inGame extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Music change
-//                Path.titleMusic.stopMusic();
+//                Path.mainMenuMusic.stopMusic();
 //                Path.clickForward.playMusic(Commons.forwardClick);
                 //Changing panel and start the game
 //                Play.frame2 = new JFrame();
@@ -100,7 +100,7 @@ public class inGame extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Music change
-//                Path.titleMusic.stopMusic();
+//                Path.mainMenuMusic.stopMusic();
 //                Path.clickForward.playMusic(Commons.forwardClick);
                 //Changing panel and start the game
 //                Play.frame2.setContentPane();
