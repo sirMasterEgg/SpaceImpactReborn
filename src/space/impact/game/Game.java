@@ -1807,6 +1807,7 @@ public class Game extends JPanel implements ActionListener{
                             }
                         }
                 }
+                //anjing
 
                 for (Bot i : bots) {
 
