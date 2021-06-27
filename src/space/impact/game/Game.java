@@ -1435,7 +1435,7 @@ public class Game extends JPanel implements ActionListener{
     }
 
     public void tubruk() {
-        if(yp >= 600) { 
+        if(yp >= 600) {
             yp=600;
         }
         if(yp <= 20) {
