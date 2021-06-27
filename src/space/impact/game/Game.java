@@ -27,6 +27,7 @@ public class Game extends JPanel implements ActionListener{
     int jumlahbarrier=3;
     int onlymisil = 0;
     int misil = 10;
+    int kamikaze = 1;
     Random rn = new Random();
     int wave=1;
     int cek=0;
@@ -52,6 +53,7 @@ public class Game extends JPanel implements ActionListener{
     JLabel barrier;
     JLabel Klabel;
     JLabel Kpeluru;
+    JLabel Kkaze;
 
 
 
@@ -63,6 +65,7 @@ public class Game extends JPanel implements ActionListener{
     Game(String usertemp,JFrame j) {
         Klabel = new JLabel();
         Kpeluru = new JLabel();
+        Kkaze = new JLabel();
     this.usertemp=usertemp;
     this.j=j;
         if(Start==0){
@@ -158,24 +161,23 @@ public class Game extends JPanel implements ActionListener{
 
         Rectangle recta = new Rectangle(460,0,750,50);
         Kpeluru.setText("<html> <table> \n" + " = " + misil);
-        Kpeluru.setFont(pixel.deriveFont(35.0f));
+        Kpeluru.setFont(font.deriveFont(35.0f));
         Kpeluru.setForeground(new Color(52, 239, 0));
         Kpeluru.setBounds(recta);
         Kpeluru.setVisible(true);
         this.add(Kpeluru);
 
+        Rectangle rectangle = new Rectangle(650, 0 , 750, 50);
+        Kkaze.setText("<html> <table> \n" + " = " + kamikaze);
+        Kkaze.setFont(font.deriveFont(35.0f));
+        Kkaze.setForeground(new Color(52, 239, 0));
+        Kkaze.setBounds(rectangle);
+        Kkaze.setVisible(true);
+        this.add(Kkaze);
     }
     //untuk design tampilan skill game
     private void kamikazeDesign(){
-        //kamikaze => hotkey(...)
-        Rectangle rect = new Rectangle(640,0,750,50);
-        JLabel Klabel = new JLabel("<html> <table> \n" +
-                " =");
-        Klabel.setFont(pixel.deriveFont(35.0f));
-        Klabel.setForeground(new Color(52, 239, 0));
-        Klabel.setBounds(rect);
-        Klabel.setVisible(true);
-        this.add(Klabel);
+        Kkaze.setText("<html> <table> \n" + " = " + kamikaze);
     }
     private void missileDesign(){
         Kpeluru.setText("<html> <table> \n" + " = " + misil);
