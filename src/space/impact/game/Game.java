@@ -114,8 +114,8 @@ public class Game extends JPanel implements ActionListener{
         kamikazeDesign();
         missileDesign();
 
-        Rectangle rect1 = new Rectangle(300,0,750,40);
-        Klabel.setText("<html> <table> \n" + " = "+jumlahbarrier);
+        Rectangle rect1 = new Rectangle(300,0,750,50);
+        Klabel.setText("<html> <table> \n" + "= " + jumlahbarrier);
         Klabel.setFont(font.deriveFont(35.0f));
         Klabel.setForeground(new Color(52, 239, 0));
         validate();
@@ -124,7 +124,7 @@ public class Game extends JPanel implements ActionListener{
         this.add(Klabel);
 
         Rectangle recta = new Rectangle(460,0,750,50);
-        Kpeluru.setText("<html> <table> \n" + " = " + misil);
+        Kpeluru.setText("<html> <table> \n" + "= " + misil);
         Kpeluru.setFont(font.deriveFont(35.0f));
         Kpeluru.setForeground(new Color(52, 239, 0));
         Kpeluru.setBounds(recta);
@@ -132,7 +132,7 @@ public class Game extends JPanel implements ActionListener{
         this.add(Kpeluru);
 
         Rectangle rectangle = new Rectangle(650, 0 , 750, 50);
-        Kkaze.setText("<html> <table> \n" + " = " + kamikaze);
+        Kkaze.setText("<html> <table> \n" + "= " + kamikaze);
         Kkaze.setFont(font.deriveFont(35.0f));
         Kkaze.setForeground(new Color(52, 239, 0));
         Kkaze.setBounds(rectangle);
@@ -151,7 +151,7 @@ public class Game extends JPanel implements ActionListener{
     }
 
     private void barrierDesign(){
-        Klabel.setText("<html> <table> \n" + " = "+jumlahbarrier);
+        Klabel.setText("<html> <table> \n" + "= "+ jumlahbarrier);
     }
     private void pausedPic(){
         ImageIcon paused = new ImageIcon(ImageClass.scaleImage(Path.pausePath, 0.5));
@@ -171,7 +171,7 @@ public class Game extends JPanel implements ActionListener{
     }
 
     void barrierDirection(){
-        ImageIcon disappear = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill3Path, 0.5));
+        ImageIcon disappear = new ImageIcon(ImageClass.scaleImage(Path.instructionSkill3Path2, 0.11));
         JLabel logolabel = new JLabel();
         logolabel.setIcon(disappear);
         logolabel.setHorizontalAlignment(JLabel.LEADING);
@@ -1184,7 +1184,7 @@ public class Game extends JPanel implements ActionListener{
 
                     for (Bot i : bots) {
 
-                        int randomizer = rn.nextInt(100) + 1;
+                        int randomizer = rn.nextInt(200) + 1;
                         if (randomizer == 1 || randomizer == 2) {
                             tembakanbot = 1;
                             bulletM.add(new peluruMusuh(i.getXbot() - 50, i.getYbot() - 25, 1));
