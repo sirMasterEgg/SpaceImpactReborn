@@ -17,6 +17,7 @@ public class Game extends JPanel implements ActionListener{
     private PlayerInfo<String> pI;
     private Font pixel = new FontMaker(Path.pixelFont).getFont();
     private Font font = new FontMaker(Path.mainFont).getFont();
+    private Image gamePaused = null;
     static final int DELAY = 20;
     ArrayList<peluru> bullet = new ArrayList<>();
     ArrayList<peluruMusuh> bulletM = new ArrayList<>();
@@ -152,11 +153,12 @@ public class Game extends JPanel implements ActionListener{
     private void barrierDesign(){
         Klabel.setText("<html> <table> \n" + " = "+jumlahbarrier);
     }
-    private void pausePic(){
-        ImageIcon pause = new ImageIcon(ImageClass.scaleImage(Path.pausePath, 0.5));
+    private void pausedPic(){
+        ImageIcon paused = new ImageIcon(ImageClass.scaleImage(Path.pausePath, 0.5));
         JLabel logolabel = new JLabel();
-        logolabel.setIcon(pause);
+        logolabel.setIcon(paused);
         logolabel.setHorizontalAlignment(JLabel.LEADING);
+        logolabel.setBounds(350, 200, ImageClass.imgWidth(), ImageClass.imgHeight());
         this.add(logolabel);
     }
     void missileDirection(){
@@ -238,8 +240,11 @@ public class Game extends JPanel implements ActionListener{
                     g.setColor(Color.green);
                     g.setFont(pixel.deriveFont(20.0f));
                     g.drawString(" SCORE  " + score, 20, 18);
-//                    barrierDirection();
-//                    barrierDesign();
+                if (pause == 1){
+                    g.setColor(Color.green);
+                    g.setFont(pixel.deriveFont(20.0f));
+                    g.drawString(" PAUSED  " + score, 20, 18);
+                }
                     if (time == 3) {
                         only = 0;
                         this.remove(barrier);
@@ -1290,6 +1295,11 @@ public class Game extends JPanel implements ActionListener{
                         this.add(Background);
                     }
                 }
+                else if (pause == 1){
+                    g.setColor(Color.green);
+                    g.setFont(pixel.deriveFont(20.0f));
+                    g.drawString(" GAME PAUSED  " + score, 20, 18);
+                }
             }
         }
     }
@@ -1542,10 +1552,11 @@ public class Game extends JPanel implements ActionListener{
                         pause=1;
                     }else if(pause==1){
                         pause=0;
-                        pausePic();
                     }
                     break;
 
+
+                default:
 
             }
 
