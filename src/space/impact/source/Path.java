@@ -28,6 +28,7 @@ public interface Path {
     String instructionSkill1Path = "res/foto/dead.png";
     String instructionSkill2Path = "res/foto/launcher.png";
     String instructionSkill3Path = "res/foto/Barrier.png";
+    String instructionSkill3Path2 = "res/foto/Barrier2.png";
     String InstructionPausePath = "res/foto/Pause.png";
     String pausePath = "res/foto/pausedGame.png";
 
@@ -40,5 +41,4 @@ public interface Path {
     // game mode
     MusicPlay gameMusic = new MusicPlay();
     String gameMusicPath = "res/sound/NintendoRevolution.wav";
-
 }
